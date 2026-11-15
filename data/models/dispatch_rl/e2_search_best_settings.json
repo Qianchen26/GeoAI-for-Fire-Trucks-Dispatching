@@ -1,0 +1,11 @@
+{
+  "learning_rate": 0.00011920879262846236,
+  "n_steps": 512,
+  "batch_size": 1024,
+  "n_epochs": 20,
+  "gae_lambda": 0.8,
+  "ent_coef": 0.0004602901349896371,
+  "clip_range": 0.1,
+  "vf_coef": 1.0,
+  "width": 256
+}

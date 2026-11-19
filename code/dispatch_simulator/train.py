@@ -46,7 +46,7 @@ ELAPSED_HALF_LIFE_H = 5.4                                        # [DESIGN] half
 SEARCH_RUNGS = [401_408, 1_204_224, 3_612_672]                   # [DESIGN] training decisions at which full-environment trials are compared; multiples of every rollout size (4 x 256, 512 or 1024)
 SEARCH_TRIALS, SEARCH_WORKERS, SEARCH_ENVS = 12, 3, 4            # [DESIGN] trials, parallel workers and environments per trial
 FINAL_STEPS, FINAL_ENVS = 6_000_000, 8                           # [DESIGN] decisions and environments of the final run (8 keeps the search's update size exactly); the search's settings reached their policy within 0.1M
-VALIDATION_DAYS = 12                                             # [DESIGN] fixed synthetic validation days for the objective and the monitor
+VALIDATION_DAYS = 48                                             # [TUNED] fixed synthetic validation days for the objective and the monitor; with 12, a single day moved the mean by 0.4
 VALIDATION_SEED = 20250401                                       # [DESIGN] seed of the validation days; training episodes draw from other seeds
 EVAL_EVERY = 200_000                                             # [DESIGN] decisions between two evaluations in the final run
 CHECKPOINT_EVERY = 500_000                                       # [DESIGN] decisions between two saved copies of the model in the final run, so a stopped run keeps its progress
@@ -84,7 +84,7 @@ def sample_settings(trial, small_system=False):
     return settings
 
 
-def build_model(env, settings, seed, log_dir=None):
+def build_model(env, settings, seed, log_dir=None, gamma=GAMMA):
     """Create a MaskablePPO model with the given settings and the design's discount.
 
     Input
@@ -92,13 +92,14 @@ def build_model(env, settings, seed, log_dir=None):
         settings : PPO settings (dict from sample_settings)
         seed     : the model's seed (int)
         log_dir  : None, or a folder where the training signals are written as progress.csv (Path)
+        gamma    : the discount per step (float; the dispatch design's GAMMA unless a study sets its own)
     Output
         The model (MaskablePPO).
     Example
         model = build_model(env, {"learning_rate": 3e-4, "n_steps": 1024, ...}, seed=0)
     """
     width = settings["width"]
-    model = MaskablePPO("MlpPolicy", env, gamma=GAMMA, learning_rate=settings["learning_rate"], n_steps=settings["n_steps"],
+    model = MaskablePPO("MlpPolicy", env, gamma=gamma, learning_rate=settings["learning_rate"], n_steps=settings["n_steps"],
                         batch_size=settings["batch_size"], n_epochs=settings["n_epochs"], gae_lambda=settings["gae_lambda"],
                         ent_coef=settings["ent_coef"], clip_range=settings["clip_range"], vf_coef=settings["vf_coef"],
                         policy_kwargs={"net_arch": {"pi": [width, width], "vf": [width, width]}}, seed=seed, verbose=0)
@@ -285,24 +286,24 @@ class Evaluator:
 
     The days are drawn like training episodes (a training day, a condition, a fresh seed) from a seed that training
     never uses, so the comparison measures how well the agent learned the training distribution; no April to September
-    call enters it. All policies play the same calls with the same travel draws. The protocol is simulated directly,
-    so its choice counts even when its engine is not among the agent's five candidates. The closest engine without the
-    protocol's quint rule (always the first candidate) is scored too. Because the reward does not value engine type,
-    dropping the quint rule alone scores above the protocol; an agent has learned something beyond the closest engine
-    only when it beats that score.
+    call enters it. All policies play the same calls with the same travel draws, and every return includes the engine
+    types priced by rl_env.type_cost. The protocol is simulated directly, so its choice counts even when its engine is
+    not among the agent's five candidates. The closest engine without the protocol's quint rule (the candidate with the
+    least modeled travel every time) is scored too, as a reference: it pays the type cost wherever it ignores the quint
+    rule.
 
     Input (constructor)
         days : how many validation days (int); seed : the seed that draws them (int)
     Output
         An object whose compare(model) returns a DataFrame with one row per validation day: condition, day, protocol
-        return, closest return (the first candidate every time), agent return (unshaped, every arrival of the day's calls
+        return, closest return (the least-travel candidate every time), agent return (unshaped, every arrival of the day's calls
         counted to the end of the scenario), improvement (agent minus protocol, in units of ten weighted minutes;
         positive = the agent is better), improvement over closest (agent minus closest), the agent's share of
         decisions that differ from the protocol's, and its closest agreement (the share of decisions where it takes
-        the first candidate).
+        the least-travel candidate).
     Example
-        evaluator = Evaluator(12, VALIDATION_SEED); evaluator.compare(model)["improvement"].mean() -> 0.13 for an agent
-        that always takes the closest engine
+        evaluator = Evaluator(48, VALIDATION_SEED); evaluator.compare(model)["improvement"].mean() -> 0.0 for an agent
+        that reproduces the protocol
     """
 
     def __init__(self, days=VALIDATION_DAYS, seed=VALIDATION_SEED):
@@ -315,19 +316,27 @@ class Evaluator:
         self.scenarios = [rl_env.sample_scenario(world, generator, rng) for _ in range(days)]
         self.protocol = []
         for scenario in self.scenarios:
-            prepared = rl_env.prepare_scenario(world, rl, scenario)
-            simulated = environment.simulate(world, scenario, policies.closest_engine, verbose=False)
-            self.protocol.append(rl_env.accrued_reward(prepared, simulated, rl_env.new_tally(prepared)))
+            prepared, sent, type_costs = rl_env.prepare_scenario(world, rl, scenario), set(), []
+
+            def protocol(world_, scenario_, run, available, travel_s, context=None):    # the protocol, with its engine types priced as in training
+                engine_id = policies.closest_engine(world_, scenario_, run, available, travel_s)
+                if engine_id is not None:
+                    type_costs.append(rl_env.type_cost(prepared, sent, run.name, engine_id))
+                    sent.add(run.name)
+                return engine_id
+            simulated = environment.simulate(world, scenario, protocol, verbose=False)
+            self.protocol.append(rl_env.accrued_reward(prepared, simulated, rl_env.new_tally(prepared)) - sum(type_costs))
         self.closest = [self.play(scenario, None)[0] for scenario in self.scenarios]
 
     def play(self, scenario, model):
-        """Run one validation day to its end with the model (None = always the first candidate); return (unshaped return,
-        share of decisions unlike the protocol's, share of decisions that take the first candidate)."""
+        """Run one validation day to its end with the model (None = always the least-travel candidate); return (unshaped
+        return, share of decisions unlike the protocol's, share of decisions that take the least-travel candidate)."""
         observation, _ = self.env.reset(options={"scenario": scenario, "full_day": True})
         first = 0
         while True:
-            action = 0 if model is None else int(model.predict(observation, action_masks=self.env.action_masks(), deterministic=True)[0])
-            first += action == 0
+            closest_slot = self.env.closest_slot
+            action = closest_slot if model is None else int(model.predict(observation, action_masks=self.env.action_masks(), deterministic=True)[0])
+            first += action == closest_slot
             observation, _, terminated, truncated, info = self.env.step(action)
             if terminated or truncated:
                 decisions = max(info["decisions"], 1)
@@ -347,34 +356,29 @@ class Evaluator:
 def collect_protocol_decisions(days, seed):
     """Collect the observation, the mask and the protocol's slot of every decision of simulated days played by the protocol.
 
-    A decision where the protocol's engine is not among the five candidates cannot be imitated. Such a decision is left
-    out and the closest engine is sent instead; the number left out is printed.
+    The protocol's engine is always the first candidate, so every slot is 0; cloning teaches the actor to take it.
 
     Input
         days : how many simulated days (int); seed : the seed of their draws (int)
     Output
-        Three arrays: observations (decisions x 207), masks (decisions x 5) and the protocol's slots (decisions).
+        Three arrays: observations (decisions x 208), masks (decisions x 5) and the protocol's slots (decisions, all 0).
     Example
-        observations, masks, slots = collect_protocol_decisions(100, seed=7); (slots == 0).mean() -> about 0.94
+        observations, masks, slots = collect_protocol_decisions(100, seed=7); len(slots) -> about 11,000
     """
     env = make_dispatch_env(seed)().env
-    observations, masks, slots, left_out = [], [], [], 0
+    observations, masks, slots = [], [], []
     for _ in range(days):
         observation, _ = env.reset()
         while True:
-            slot = env.protocol_slot
-            if slot is None:
-                left_out += 1
-            else:
-                observations.append(observation)
-                masks.append(env.action_masks())
-                slots.append(slot)
-            observation, _, terminated, truncated, _ = env.step(0 if slot is None else slot)
+            observations.append(observation)
+            masks.append(env.action_masks())
+            slots.append(env.protocol_slot)
+            observation, _, terminated, truncated, _ = env.step(env.protocol_slot)
             if terminated or truncated:
                 break
     env.close()
-    print(f"protocol decisions for behaviour cloning: {len(slots):,} kept from {days} days; {left_out} left out because the "
-          f"protocol's engine is not among the five candidates; the protocol leaves the closest engine in {np.mean(np.array(slots) != 0):.3f}")
+    print(f"protocol decisions for behaviour cloning: {len(slots):,} from {days} days; the protocol's engine is the first "
+          f"candidate in {np.mean(np.array(slots) == 0):.3f} of them")
     return np.array(observations), np.array(masks), np.array(slots)
 
 
@@ -481,7 +485,7 @@ def dispatch_objective(trial):
     return improvement
 
 
-def open_study(name, min_resource, worker=0):
+def open_study(name, min_resource, worker=0, model_dir=None):
     """Open (or create) a shared optuna study with the ASHA pruner, stored next to the models in a journal file.
 
     The journal file locks each write, so parallel workers never take the same queued trial (SQLite storage can hand
@@ -490,19 +494,21 @@ def open_study(name, min_resource, worker=0):
     Input
         name : the study's name, also its file name (str); min_resource : the first rung in decisions (int)
         worker : the worker's index, which seeds its sampler so that parallel workers draw different settings (int)
+        model_dir : the folder of the journal file (Path; MODEL_DIR unless a study keeps its own)
     Output
         The optuna study (maximized).
     Example
         open_study("e2_search", E2_RUNGS[1], worker=3)
     """
-    MODEL_DIR.mkdir(parents=True, exist_ok=True)
-    storage = optuna.storages.JournalStorage(optuna.storages.journal.JournalFileBackend(str(MODEL_DIR / f"{name}.journal")))
+    model_dir = model_dir or MODEL_DIR
+    model_dir.mkdir(parents=True, exist_ok=True)
+    storage = optuna.storages.JournalStorage(optuna.storages.journal.JournalFileBackend(str(model_dir / f"{name}.journal")))
     return optuna.create_study(study_name=name, storage=storage, direction="maximize", load_if_exists=True,
                                sampler=optuna.samplers.TPESampler(seed=worker, n_startup_trials=8, constant_liar=True),
                                pruner=optuna.pruners.SuccessiveHalvingPruner(min_resource=min_resource, reduction_factor=REDUCTION_FACTOR))
 
 
-def run_search(name, worker_command, min_resource, workers, trials, first_settings=()):
+def run_search(name, worker_command, min_resource, workers, trials, first_settings=(), script=None, model_dir=None):
     """Run an ASHA search with parallel worker processes of this script, then write and print its trials.
 
     Input
@@ -510,28 +516,31 @@ def run_search(name, worker_command, min_resource, workers, trials, first_settin
         min_resource : the first rung at which trials can be stopped, in decisions (int)
         workers : parallel processes (int); trials : trials in total (int)
         first_settings : settings to try before the sampler's own draws, when the study is new (list of dicts)
+        script : the script whose worker command runs the trials (path; this file unless another study's script)
+        model_dir : the folder of the study, its logs and its results (Path; MODEL_DIR unless a study keeps its own)
     Output
         The best settings (dict), also written as <name>_best_settings.json; every trial is written as <name>_trials.csv
         and each worker's output as <worker_command>_<i>.log, all next to the models.
     Example
         run_search("e2_search", "e2-worker", E2_RUNGS[1], 9, 27)
     """
-    study = open_study(name, min_resource)
+    model_dir = model_dir or MODEL_DIR
+    study = open_study(name, min_resource, model_dir=model_dir)
     if not study.trials:
         for settings in first_settings:
             study.enqueue_trial(settings)
     per_worker = int(np.ceil(trials / workers))
-    processes = [subprocess.Popen([sys.executable, __file__, worker_command, str(per_worker), str(i)],
-                                  stdout=open(MODEL_DIR / f"{worker_command}_{i}.log", "w"), stderr=subprocess.STDOUT) for i in range(workers)]
+    processes = [subprocess.Popen([sys.executable, str(script or __file__), worker_command, str(per_worker), str(i)],
+                                  stdout=open(model_dir / f"{worker_command}_{i}.log", "w"), stderr=subprocess.STDOUT) for i in range(workers)]
     for process in processes:
         process.wait()
-    study = open_study(name, min_resource)
+    study = open_study(name, min_resource, model_dir=model_dir)
     trials = study.trials_dataframe()
-    trials.to_csv(MODEL_DIR / f"{name}_trials.csv", index=False)
+    trials.to_csv(model_dir / f"{name}_trials.csv", index=False)
     columns = ["number", "value", "state", "duration"] + [c for c in trials.columns if c.startswith("params_")]
     print(f"{name}: best value {study.best_value:.4f} (trial {study.best_trial.number}) with {study.best_params}\n"
           f"{trials[columns].sort_values('value', ascending=False).to_string()}\n")
-    (MODEL_DIR / f"{name}_best_settings.json").write_text(json.dumps(study.best_params, indent=2))
+    (model_dir / f"{name}_best_settings.json").write_text(json.dumps(study.best_params, indent=2))
     return study.best_params
 
 
@@ -581,7 +590,7 @@ def initial_episode_reward(model, world_inputs, episodes=BASELINE_EPISODES, seed
     return float(np.mean(totals))
 
 
-def acceptance(progress, initial_reward, tail=0.3):
+def acceptance(progress, initial_reward, tail=0.3, entropy_ceiling=log(5) / 2):
     """Check a training run's signals against the acceptance criteria.
 
     Training is accepted when the reward rises from the untrained policy's level and levels off, both on the training
@@ -595,6 +604,7 @@ def acceptance(progress, initial_reward, tail=0.3):
                          validation improvement on the rows of an evaluation, including one of the final model)
         initial_reward : the training reward of the policy before any optimization (float, from initial_episode_reward)
         tail           : the share of the run that counts as "late" (float)
+        entropy_ceiling: the late entropy must stay below this (nats; half of the uniform five-action policy's by default)
     Output
         One row per criterion (DataFrame with columns value, threshold, passes):
         - training reward rises: D = mean episode reward over the late updates minus initial_reward (> 0);
@@ -640,7 +650,7 @@ def acceptance(progress, initial_reward, tail=0.3):
               "explained variance (late mean)": (variance_late, "> 0", variance_late > 0),
               "explained variance not falling (late minus middle)": (variance_late - variance_middle, "> -0.05", variance_late - variance_middle > -0.05),
               "approx KL (largest, second half)": (kl_max, "<= 0.05", kl_max <= 0.05),
-              "entropy late (nats)": (entropy_late, f"< {np.log(5) / 2:.3f}", entropy_late < np.log(5) / 2),
+              "entropy late (nats)": (entropy_late, f"< {entropy_ceiling:.3f}", entropy_late < entropy_ceiling),
               "entropy late trend change (nats)": (entropy_change, "< 0.05", entropy_change < 0.05)}
     return pd.DataFrame(checks, index=["value", "threshold", "passes"]).T
 

@@ -1,0 +1,136 @@
+/opt/anaconda3/lib/python3.13/site-packages/pandas/core/computation/expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.10.1' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+
+Fontconfig error: No writable cache directories
+	/opt/homebrew/var/cache/fontconfig
+	/Users/qianchenyu/.cache/fontconfig
+	/Users/qianchenyu/.fontconfig
+Matplotlib is building the font cache; this may take a moment.
+WARNING: Logging before InitGoogleLogging() is written to STDERR
+W20261116 14:02:52.506170 1870622720 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+W20261116 14:02:52.506318 1870622720 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+W20261116 14:02:52.506386 1870622720 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+W20261116 14:02:52.506448 1870622720 cpu_info.cc:239] IOError: sysctlbyname failed for 'hw.optional.neon'. Detail: [errno 1] Operation not permitted
+PREPARED in 17.9s; E1 comparisons=6; E2 comparisons=4; matched states and choices verified
+SIMULATION PLAN: 225 unique configuration-stream evaluations in 105 groups; pending groups=105
+GROUP 1/105 Medium_w1_2045 seed=106 n=3 125.2s
+GROUP 2/105 Medium_w1_2045 seed=104 n=3 126.6s
+GROUP 3/105 Medium_w1_2045 seed=103 n=3 128.8s
+GROUP 4/105 Medium_w1_2045 seed=102 n=3 128.9s
+GROUP 5/105 Medium_w1_2045 seed=105 n=3 129.5s
+GROUP 6/105 Medium_w1_2045 seed=101 n=3 129.8s
+GROUP 7/105 Medium_w1_2045 seed=107 n=3 130.7s
+GROUP 8/105 Medium_w1_2045 seed=108 n=3 130.9s
+GROUP 9/105 High_w1_2045 seed=101 n=2 98.4s
+GROUP 10/105 Medium_w1_2045 seed=109 n=3 122.0s
+GROUP 11/105 Medium_w1_2045 seed=111 n=3 119.1s
+GROUP 12/105 Medium_w1_2045 seed=110 n=3 123.2s
+GROUP 13/105 Medium_w1_2045 seed=113 n=3 123.0s
+GROUP 14/105 Medium_w1_2045 seed=114 n=3 123.6s
+GROUP 15/105 Medium_w1_2045 seed=115 n=3 124.6s
+GROUP 16/105 Medium_w1_2045 seed=112 n=3 131.3s
+GROUP 17/105 High_w1_2045 seed=102 n=2 95.8s
+GROUP 18/105 High_w1_2045 seed=104 n=2 94.9s
+GROUP 19/105 High_w1_2045 seed=103 n=2 97.0s
+GROUP 20/105 High_w1_2045 seed=106 n=2 94.4s
+GROUP 21/105 High_w1_2045 seed=105 n=2 98.5s
+GROUP 22/105 High_w1_2045 seed=107 n=2 97.4s
+GROUP 23/105 High_w1_2045 seed=108 n=2 98.0s
+GROUP 24/105 High_w1_2045 seed=109 n=2 94.2s
+GROUP 25/105 High_w1_2045 seed=110 n=2 95.2s
+GROUP 26/105 High_w1_2045 seed=111 n=2 91.4s
+GROUP 27/105 High_w1_2045 seed=113 n=2 97.0s
+GROUP 28/105 High_w1_2045 seed=112 n=2 100.3s
+GROUP 29/105 High_w1_2045 seed=114 n=2 96.6s
+GROUP 30/105 High_w0_2035 seed=101 n=2 92.4s
+GROUP 31/105 High_w0_2035 seed=102 n=2 91.4s
+GROUP 32/105 High_w1_2045 seed=115 n=2 96.0s
+GROUP 33/105 High_w0_2035 seed=103 n=2 92.3s
+GROUP 34/105 High_w0_2035 seed=104 n=2 90.4s
+GROUP 35/105 High_w0_2035 seed=106 n=2 89.5s
+GROUP 36/105 High_w0_2035 seed=109 n=2 89.7s
+GROUP 37/105 High_w0_2035 seed=105 n=2 92.8s
+GROUP 38/105 High_w0_2035 seed=110 n=2 90.8s
+GROUP 39/105 High_w0_2035 seed=107 n=2 92.9s
+GROUP 40/105 High_w0_2035 seed=108 n=2 93.5s
+GROUP 41/105 High_w0_2035 seed=111 n=2 87.1s
+GROUP 42/105 High_w0_2035 seed=112 n=2 96.0s
+GROUP 43/105 High_w0_2035 seed=113 n=2 91.6s
+GROUP 44/105 High_w0_2035 seed=114 n=2 92.3s
+GROUP 45/105 High_w0_2035 seed=115 n=2 91.5s
+GROUP 46/105 High_w0_2045 seed=102 n=2 103.5s
+GROUP 47/105 High_w0_2045 seed=101 n=2 104.6s
+GROUP 48/105 High_w0_2045 seed=103 n=2 104.8s
+GROUP 49/105 High_w0_2045 seed=104 n=2 102.6s
+GROUP 50/105 High_w0_2045 seed=105 n=2 105.3s
+GROUP 51/105 High_w0_2045 seed=106 n=2 102.3s
+GROUP 52/105 High_w0_2045 seed=107 n=2 105.5s
+GROUP 53/105 High_w0_2045 seed=108 n=2 105.6s
+GROUP 54/105 High_w0_2045 seed=111 n=2 99.1s
+GROUP 55/105 High_w0_2045 seed=109 n=2 102.1s
+GROUP 56/105 High_w0_2045 seed=110 n=2 102.9s
+GROUP 57/105 High_w0_2045 seed=112 n=2 108.1s
+GROUP 58/105 Medium_w0_2040 seed=101 n=2 85.7s
+GROUP 59/105 Medium_w0_2040 seed=102 n=2 84.6s
+GROUP 60/105 Medium_w0_2040 seed=104 n=2 82.8s
+GROUP 61/105 Medium_w0_2040 seed=103 n=2 85.1s
+GROUP 62/105 High_w0_2045 seed=113 n=2 105.0s
+GROUP 63/105 High_w0_2045 seed=114 n=2 104.7s
+GROUP 64/105 High_w0_2045 seed=115 n=2 105.1s
+GROUP 65/105 Medium_w0_2040 seed=105 n=2 85.9s
+GROUP 66/105 Medium_w0_2040 seed=106 n=2 82.2s
+GROUP 67/105 Medium_w0_2040 seed=109 n=2 82.8s
+GROUP 68/105 Medium_w0_2040 seed=111 n=2 80.5s
+GROUP 69/105 Medium_w0_2040 seed=107 n=2 86.0s
+GROUP 70/105 Medium_w0_2040 seed=108 n=2 86.0s
+GROUP 71/105 Medium_w0_2040 seed=110 n=2 83.2s
+GROUP 72/105 Medium_w0_2040 seed=112 n=2 88.8s
+GROUP 73/105 Medium_w0_2040 seed=113 n=2 83.0s
+GROUP 74/105 Medium_w0_2040 seed=114 n=2 83.4s
+GROUP 75/105 Medium_w0_2040 seed=115 n=2 84.8s
+GROUP 76/105 Medium_w0_2045 seed=104 n=2 85.4s
+GROUP 77/105 Medium_w0_2045 seed=102 n=2 87.4s
+GROUP 78/105 Medium_w0_2045 seed=101 n=2 88.0s
+GROUP 79/105 Medium_w0_2045 seed=103 n=2 87.3s
+GROUP 80/105 Medium_w0_2045 seed=105 n=2 88.2s
+GROUP 81/105 Medium_w0_2045 seed=106 n=2 84.5s
+GROUP 82/105 Medium_w0_2045 seed=107 n=2 87.8s
+GROUP 83/105 Medium_w0_2045 seed=111 n=2 82.2s
+GROUP 84/105 Medium_w0_2045 seed=109 n=2 84.5s
+GROUP 85/105 Medium_w0_2045 seed=108 n=2 88.1s
+GROUP 86/105 Medium_w0_2045 seed=110 n=2 85.3s
+GROUP 87/105 Medium_w0_2045 seed=112 n=2 90.7s
+GROUP 88/105 Medium_w0_2045 seed=113 n=2 85.0s
+GROUP 89/105 Medium_w0_2045 seed=114 n=2 85.8s
+GROUP 90/105 Medium_w0_2045 seed=115 n=2 86.5s
+GROUP 91/105 Medium_w1_2040 seed=101 n=2 82.7s
+GROUP 92/105 Medium_w1_2040 seed=102 n=2 81.9s
+GROUP 93/105 Medium_w1_2040 seed=103 n=2 82.3s
+GROUP 94/105 Medium_w1_2040 seed=104 n=2 80.8s
+GROUP 95/105 Medium_w1_2040 seed=105 n=2 82.8s
+GROUP 96/105 Medium_w1_2040 seed=106 n=2 79.6s
+GROUP 97/105 Medium_w1_2040 seed=107 n=2 84.6s
+GROUP 98/105 Medium_w1_2040 seed=108 n=2 85.0s
+GROUP 99/105 Medium_w1_2040 seed=111 n=2 79.7s
+GROUP 100/105 Medium_w1_2040 seed=109 n=2 81.6s
+GROUP 101/105 Medium_w1_2040 seed=110 n=2 81.6s
+GROUP 102/105 Medium_w1_2040 seed=112 n=2 86.9s
+GROUP 103/105 Medium_w1_2040 seed=113 n=2 82.3s
+GROUP 104/105 Medium_w1_2040 seed=114 n=2 82.6s
+GROUP 105/105 Medium_w1_2040 seed=115 n=2 80.6s
+experiment   path   w  year  delta_D_F   low_D_F  high_D_F  delta_M_F  delta_M_O
+        E1 Medium 1.0  2035   0.000000  0.000000  0.000000   0.000000   0.000000
+        E1 Medium 1.0  2045   0.001437 -0.010699  0.011046  -0.087523  -0.047644
+        E1   High 1.0  2035   0.000000  0.000000  0.000000   0.000000   0.000000
+        E1   High 1.0  2045  -0.003346 -0.022958  0.011558  -0.199836  -0.157918
+        E1   High 0.0  2035   0.001096 -0.000153  0.002709   0.000777   0.000080
+        E1   High 0.0  2045   0.021547 -0.001059  0.037603  -0.110944  -0.082183
+        E2 Medium 0.0  2040   0.026303  0.012163  0.039720   0.016815  -0.000819
+        E2 Medium 0.0  2045  -0.009444 -0.015823 -0.003076  -0.011305  -0.004964
+        E2 Medium 1.0  2040   0.026214  0.012018  0.039793   0.016815   0.000255
+        E2 Medium 1.0  2045  -0.008037 -0.014608 -0.001643  -0.010200  -0.002349
+E2 remaining horizon:
+  path   w     years          contrast chosen  delta_D_F   low_D_F  high_D_F  fast_delta_D_F  delta_M_F   low_M_F  high_M_F  fast_delta_M_F  delta_M_O   low_M_O  high_M_O  fast_delta_M_O  fast_remaining_return_A  fast_remaining_return_B
+Medium 0.0 2040,2045 A(E62) - B(CO_29)      A   0.008429 -0.001299  0.017483        0.001269   0.002755 -0.003001  0.008542       -0.001356  -0.002891 -0.003601 -0.002183       -0.007202                -3.248128                -3.303298
+Medium 1.0 2040,2045 A(E62) - B(CO_29)      B   0.009088 -0.000597  0.018315        0.001571   0.003308 -0.002525  0.009415       -0.000878  -0.001047 -0.001606 -0.000500       -0.005937                -3.168153                -3.165011
+{"status": "complete", "unique_config_stream_evaluations": 225, "raw_files": 225, "skipped_identical_E1_checkpoints": 2, "simulation_seeds": [101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115], "bootstrap_replicates": 2000, "training_runs_added": 0, "original_inputs_unchanged": true, "all_E1_E2_comparisons": 10, "missing_pooled_fire_tracts_max": 0, "elapsed_note": "Per-group timings are in logs/experimental_simulations.jsonl", "e2_selection_verified": true}

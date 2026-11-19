@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Distribution of local fire-travel changes in 2045. Shares sum the fixed baseline fire-demand weights of the 57 tracts with positive fire rates; each row totals 100\% apart from rounding. Faster and slower identify lower and higher tract mean travel under frozen PPO than under the stated reference policy. Approximate-evaluator rows compare PPO with no action; event-simulator rows compare PPO with stage greedy using the E1 pooled outputs. Unchanged means equality within numerical precision ($10^{-10}$ min). Categories describe point-estimate signs, rather than tract-level significance tests. Medium and High are county population paths; $w=0$ uses population-proportional growth and $w=1$ uses positive historical-growth shares. Changes in spatial dispersion and regional means can coexist with longer travel times in some tracts.}
+\label{tab:spatial_consequences}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrr}
+\toprule
+Growth scenario & Comparison & Faster & Slower & Unchanged \\
+\midrule
+Medium, $w=1$ & PPO--no action (approx.) & 62.9\% & 37.1\% & 0.0\% \\
+High, $w=1$ & PPO--no action (approx.) & 100.0\% & 0.0\% & 0.0\% \\
+High, $w=0$ & PPO--no action (approx.) & 100.0\% & 0.0\% & 0.0\% \\
+Medium, $w=1$ & PPO--greedy (sim.) & 52.3\% & 35.8\% & 11.9\% \\
+High, $w=1$ & PPO--greedy (sim.) & 65.6\% & 19.3\% & 15.0\% \\
+High, $w=0$ & PPO--greedy (sim.) & 51.7\% & 27.3\% & 21.0\% \\
+\bottomrule
+\end{tabular}
+\end{table}

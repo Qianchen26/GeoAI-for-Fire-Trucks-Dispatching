@@ -1,0 +1,41 @@
+{
+  "observation_size": [
+    579
+  ],
+  "action_size": 659,
+  "policy": "MaskableActorCriticPolicy(\n  (features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (pi_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (vf_features_extractor): FlattenExtractor(\n    (flatten): Flatten(start_dim=1, end_dim=-1)\n  )\n  (mlp_extractor): MlpExtractor(\n    (policy_net): Sequential(\n      (0): Linear(in_features=579, out_features=256, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=256, out_features=256, bias=True)\n      (3): Tanh()\n    )\n    (value_net): Sequential(\n      (0): Linear(in_features=579, out_features=256, bias=True)\n      (1): Tanh()\n      (2): Linear(in_features=256, out_features=256, bias=True)\n      (3): Tanh()\n    )\n  )\n  (action_net): Linear(in_features=256, out_features=659, bias=True)\n  (value_net): Linear(in_features=256, out_features=1, bias=True)\n)",
+  "net_arch": {
+    "pi": [
+      256,
+      256
+    ],
+    "vf": [
+      256,
+      256
+    ]
+  },
+  "stage_years": [
+    2030,
+    2035,
+    2040,
+    2045
+  ],
+  "targets_fast": {
+    "M_F": 6.696195732933855,
+    "M_O": 5.999245842522327
+  },
+  "target_sim": {
+    "M_F": 6.698115377209877,
+    "M_O": 6.001014500692117
+  },
+  "current_vehicles": [
+    23,
+    5
+  ],
+  "current_stations": 25,
+  "tracts": 58,
+  "fire_tracts": 57,
+  "demand_points": 6984,
+  "training_fire_arrivals": 858.0,
+  "training_other_arrivals": 13656.999999999998
+}

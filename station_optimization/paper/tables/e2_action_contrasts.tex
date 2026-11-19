@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Alternative engine-addition destinations after the common 2035 station action (E2). Action A adds an engine at the modeled E62 base; action B adds one at CO\_29. The table reports A minus B for each evaluation year and their arithmetic mean, in minutes; negative values favor A. Chosen denotes the frozen PPO policy's observed selection. Both states use the Medium county population path and the same resource configuration: $w=0$ uses population-proportional growth and $w=1$ uses positive historical-growth shares. All branches continue with the same frozen policy. $D_F$ is fixed-fire-rate-weighted dispersion of tract mean fire travel; $M_F$ and $M_O$ are regional mean fire and other-call travel. The 95\% intervals use 2,000 paired whole-stream bootstrap draws over 15 streams, with the same resampled seed indices across the two years. These contrasts evaluate the specified alternative actions and continuation rule.}
+\label{tab:e2_action_contrasts}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lllrrr}
+\toprule
+Growth & Chosen & Year & $\Delta D_F$ [95\% CI] & $\Delta M_F$ [95\% CI] & $\Delta M_O$ [95\% CI] \\
+\midrule
+$w=0$ & A & 2040 & \shortstack[r]{+0.0263\\\strut [+0.0122, +0.0397]} & \shortstack[r]{+0.0168\\\strut [+0.0085, +0.0249]} & \shortstack[r]{-0.0008\\\strut [-0.0013, -0.0003]} \\
+$w=0$ & A & 2045 & \shortstack[r]{-0.0094\\\strut [-0.0158, -0.0031]} & \shortstack[r]{-0.0113\\\strut [-0.0155, -0.0070]} & \shortstack[r]{-0.0050\\\strut [-0.0061, -0.0039]} \\
+$w=0$ & A & Mean & \shortstack[r]{+0.0084\\\strut [-0.0013, +0.0175]} & \shortstack[r]{+0.0028\\\strut [-0.0030, +0.0085]} & \shortstack[r]{-0.0029\\\strut [-0.0036, -0.0022]} \\
+$w=1$ & B & 2040 & \shortstack[r]{+0.0262\\\strut [+0.0120, +0.0398]} & \shortstack[r]{+0.0168\\\strut [+0.0086, +0.0250]} & \shortstack[r]{+0.0003\\\strut [-0.0004, +0.0009]} \\
+$w=1$ & B & 2045 & \shortstack[r]{-0.0080\\\strut [-0.0146, -0.0016]} & \shortstack[r]{-0.0102\\\strut [-0.0148, -0.0055]} & \shortstack[r]{-0.0023\\\strut [-0.0029, -0.0018]} \\
+$w=1$ & B & Mean & \shortstack[r]{+0.0091\\\strut [-0.0006, +0.0183]} & \shortstack[r]{+0.0033\\\strut [-0.0025, +0.0094]} & \shortstack[r]{-0.0010\\\strut [-0.0016, -0.0005]} \\
+\bottomrule
+\end{tabular}
+\end{table}

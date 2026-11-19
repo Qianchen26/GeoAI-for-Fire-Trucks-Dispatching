@@ -1,0 +1,30 @@
+{
+  "status": "complete",
+  "unique_config_stream_evaluations": 225,
+  "raw_files": 225,
+  "skipped_identical_E1_checkpoints": 2,
+  "simulation_seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115
+  ],
+  "bootstrap_replicates": 2000,
+  "training_runs_added": 0,
+  "original_inputs_unchanged": true,
+  "all_E1_E2_comparisons": 10,
+  "missing_pooled_fire_tracts_max": 0,
+  "elapsed_note": "Per-group timings are in logs/experimental_simulations.jsonl",
+  "e2_selection_verified": true
+}

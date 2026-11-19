@@ -1,0 +1,11 @@
+,value,threshold,passes
+training reward rises (late minus untrained),4.9631524221266075,> 0,True
+training reward converged (late trend change / rise),0.0007781300835411332,< 0.1,True
+training reward plateau (late block range / rise),0.0005524237033999901,< 0.1,True
+validation improvement rises (last three minus first),1.7651913550226905,> 0,True
+validation improvement converged (late trend change / rise),0.0008507240907009468,< 0.1,True
+explained variance (late mean),0.9997078431280035,> 0,True
+explained variance not falling (late minus middle),0.00036428170307500896,> -0.05,True
+"approx KL (largest, second half)",0.032848686,<= 0.05,True
+entropy late (nats),0.07368355999749737,< inf,True
+entropy late trend change (nats),-0.010717986522556795,< 0.05,True

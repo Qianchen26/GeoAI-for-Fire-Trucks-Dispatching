@@ -1,5 +1,30 @@
 # GeoAI-for-Fire-Trucks-Dispatching
 
+## Station optimization in Gainesville–Alachua County
+
+**Author** · Qianchen Yu
+
+This branch contains the staged station and fleet planning study. The planner evaluates building or moving a station and adding an engine or quint at four five-year decision points. E1 compares a frozen PPO policy with a stage-greedy policy. E2 compares two engine locations under matched growth scenarios.
+
+| Artifact | Files |
+| --- | --- |
+| Planning environment and training | [Planning model](code/dispatch_simulator/planning.py) and [training and evaluation](code/dispatch_simulator/plan_train.py) |
+| Frozen planning policy | [Checkpoint](data/models/planning/final/model.zip), [training settings](data/models/planning/final/run.json), and [evaluation results](data/models/planning/final/) |
+| E1 and E2 | [Experiment runner](station_optimization/run_experiments.py), [results and 225 simulation archives](station_optimization/results/), and [execution report](station_optimization/results/execution_report.md) |
+| Figures and tables | [Main figures and tables (PDF)](station_optimization/paper/figures_and_tables.pdf), [supplementary figures (PDF)](station_optimization/paper/supplementary_figures.pdf), and [numerical tables](station_optimization/tables_for_review.md) |
+
+To regenerate the numerical tables from the archived results, run this from the repository root:
+
+```sh
+python station_optimization/make_tables.py
+```
+
+Full policy replay uses the external inputs at the paths and SHA-256 digests in the [frozen input manifest](station_optimization/inputs_manifest.json). The archived simulator reads the FY2025 dispatch table with the original `focal` column. To rebuild that table, use this branch's [dataset builder](code/data_collection/build_engine_dispatches_fy2025.py) with the [FY2025 source snapshot](https://github.com/Qianchen26/Dataset-Schema-for-Fire/tree/f249b87e8edc09d58022ec5d164f4a3b1fb59e0a/data/raw). Place the raw source files in `data/raw/gnv_alachua/` and the Appendix E crosswalk in `data/derived/gfr_soc_2024/dashboard/`. The [Alachua collector](code/data_collection/fetch_gnv_alachua_layers.py) and the [2010 Census collector](code/data_collection/fetch_census2010_blocks_alachua.py) identify the additional local-agency, Census and population projection inputs. The manifest records the software versions and SHA-256 digests. For the two text files updated to use the published directory name, it also records their original sizes and digests.
+
+With the frozen inputs in place, run `python station_optimization/reviews/experiment/audit_experiments.py` to replay the saved policy and check the archived comparisons. The [simulation file digests](station_optimization/reviews/experiment/raw_hash_receipt.json) also allow verification of the raw result archives on their own.
+
+## Engine dispatch simulator
+
 Code for a SimPy simulator of fire-engine dispatch in Gainesville and Alachua County, Florida. It replays the FY2025
 engine dispatches of Gainesville Fire Rescue and Alachua County Fire Rescue, checks the simulator against that record,
 compares dispatch policies, and generates synthetic scenarios for training a dispatch policy. The data are not stored

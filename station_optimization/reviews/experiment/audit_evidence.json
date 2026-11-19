@@ -1,0 +1,800 @@
+{
+  "audit_utc": "2026-11-16T19:37:21.835807+00:00",
+  "audit_script_sha256": "fb23bb07da7a2e884d39284d6b5f9399fbbf76169dc6ba0d07e1c374fc8e26f0",
+  "original_manifest_sha256": "89613c91befe9563eb1d0d0b9d3fc4e2f4a2b24ddae0a1087a2ac5a1b2e8a233",
+  "original_inputs": [
+    {
+      "path": "station_optimization/task.md",
+      "sha256": "8b713f61771f919c62bb2f434487e9faa63e91e7eb8ed2abaffccf8f76a88190",
+      "bytes": 17461,
+      "matches": true
+    },
+    {
+      "path": "station_optimization/run_experiments.py",
+      "sha256": "e4f60e48e421307ed96421f5f8baab3945800dfbfb36c050604bcd88b3068407",
+      "bytes": 24290,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/setup.json",
+      "sha256": "460b074b8931b09f70c7c6d7157f8b4091c06a3473399f4e5c3ade6f1fccd0dd",
+      "bytes": 870,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/baselines.pkl",
+      "sha256": "ee76d6a6f311f1a70ae5f62f1c1eb445449e50ada9393d24495fcb3ad57aec2f",
+      "bytes": 1139389,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/final/model.zip",
+      "sha256": "93f5cb202a377edfa7ef1254e46864f56a34e889540e9f8d3afc98fd8a16f95a",
+      "bytes": 7256060,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/final/run.json",
+      "sha256": "264f2d7ab941ca175928d83b594574cf8ba8a3676baee9dce812e3c9e7816944",
+      "bytes": 383,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/final/health.csv",
+      "sha256": "3b0b824aca1d99ffedb2fbb02af573291303084245207dc2aa7b60f7f66a38b3",
+      "bytes": 765,
+      "matches": true
+    },
+    {
+      "path": "data/derived/engine_dispatches_fy2025/engine_dispatches.parquet",
+      "sha256": "f8133d7292b215ce0c5e973c5e99f4ffc72bab9dc36382175a36aab588b86c89",
+      "bytes": 2752026,
+      "matches": true
+    },
+    {
+      "path": "data/derived/engine_dispatches_fy2025/engines.csv",
+      "sha256": "f9a0ab39c092db648c546bfeb6221e05b4cfaf5d424fcb05a2ed65ba6f46edf9",
+      "bytes": 2996,
+      "matches": true
+    },
+    {
+      "path": "data/raw/gnv_alachua/alachua_drive.graphml",
+      "sha256": "d59a55efdc8064352cf38285ccabdf495b36dabe382aef545d7eecd4ffcee64e",
+      "bytes": 21354571,
+      "matches": true
+    },
+    {
+      "path": "data/raw/gnv_alachua/acfr_gfr_automatic_aid_fy2024.parquet",
+      "sha256": "6c294650b28391c99012d8cf6f3df4180f020b33a10a14f52bf145c8c3023451",
+      "bytes": 75387,
+      "matches": true
+    },
+    {
+      "path": "data/raw/gnv_alachua/census2010_blocks_alachua.csv",
+      "sha256": "bf67ae8d3e6866375f9105c27d3422c48dcf1d88c6d4d8d5b5236af4f9ebd3a8",
+      "bytes": 535934,
+      "matches": true
+    },
+    {
+      "path": "data/raw/gnv_alachua/census2020_blocks_alachua.gpkg",
+      "sha256": "0b94022c18ffa76239b4b661be2b100aca1d2a6ccf3e83e856389debfba1dbc2",
+      "bytes": 6246400,
+      "matches": true
+    },
+    {
+      "path": "data/raw/gnv_alachua/bebr_alachua_projections_2026.csv",
+      "sha256": "f3102b932a91cb7d86ff3f58eb6ffdc5f1a5d2afa2a7378c91bcb61b985a2555",
+      "bytes": 304,
+      "matches": true
+    },
+    {
+      "path": "code/dispatch_simulator/scenarios.py",
+      "sha256": "5b9acd113f0a3645f3f7ea774d203d2ed4268e4c205c2f6011bca0db1ad54036",
+      "bytes": 55608,
+      "matches": true
+    },
+    {
+      "path": "code/dispatch_simulator/measures.py",
+      "sha256": "39fa78d9032fb5c543c5d53ca648cf8adbfc1fec9a8d7b88ea6fe7192fc6cee6",
+      "bytes": 120305,
+      "matches": true
+    },
+    {
+      "path": "code/dispatch_simulator/e2_small_system.py",
+      "sha256": "133f5b6be182d39b8843f8b182fca48b80a450aed51ddc166081a72e67245491",
+      "bytes": 15840,
+      "matches": true
+    },
+    {
+      "path": "code/dispatch_simulator/train.py",
+      "sha256": "567f2149144dfd1663c68e4289e25b61738516e9ff4e245e2396990415bf20d2",
+      "bytes": 47093,
+      "matches": true
+    },
+    {
+      "path": "code/dispatch_simulator/environment.py",
+      "sha256": "92f9b4671437f08bcd0e47f4936d822f081ab171dfda819aced09d19363aa406",
+      "bytes": 99299,
+      "matches": true
+    },
+    {
+      "path": "code/dispatch_simulator/planning.py",
+      "sha256": "705dc5bdb5af1128b07fd5ca00a9dabbc8250b933df585428813a83955e9e1f4",
+      "bytes": 58941,
+      "matches": true
+    },
+    {
+      "path": "code/dispatch_simulator/plan_train.py",
+      "sha256": "1e802985c55be466045c8f4ff2d92aa07c2abcb11923cd0384cc59d98c119d8c",
+      "bytes": 27877,
+      "matches": true
+    },
+    {
+      "path": "code/dispatch_simulator/main.py",
+      "sha256": "1ff4844db777b459d6c1f30bd1e9b18331abd549f745bbaf160600aa3cadfefc",
+      "bytes": 22350,
+      "matches": true
+    },
+    {
+      "path": "code/dispatch_simulator/policies.py",
+      "sha256": "e6728a47e130ce9b9fa3fd3927786b7ddcff712c044eb5a26c63636b380979d2",
+      "bytes": 8734,
+      "matches": true
+    },
+    {
+      "path": "code/dispatch_simulator/rl_env.py",
+      "sha256": "15839be885e90e1439a21bee57e3e6a61d5e3f7f5643461e32d148f95792afee",
+      "bytes": 38859,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/final/validation_draws.csv",
+      "sha256": "9ad7827ce69e7df0a3065235d732c763cd37e58c1532ff192c84e0ee8e2c481d",
+      "bytes": 3594,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/final/rq3_actions.csv",
+      "sha256": "bd59ff059a3e764245231eaa80e0223493f0b91b12de4684e442395c01a68359",
+      "bytes": 2483,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/final/evaluation_comparisons.csv",
+      "sha256": "204d5d4ec2a8d0c265d3e27efbf33cdb84db469f892b10183cee70ef0f26134f",
+      "bytes": 1261,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/final/evaluation_years.csv",
+      "sha256": "807d4deac57d3c29d47951cc0d3b658872a93a2928ce2a08d743b7fb188ef5b7",
+      "bytes": 202596,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/final/evaluation_draws.csv",
+      "sha256": "45cafe00d6b3ccbb367592776373a34a2bfe369695deb9bf907e8c716f1baa0b",
+      "bytes": 25936,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/final/progress.csv",
+      "sha256": "1e05c3112b11a842984604f60c95a491a9115fa978afd0074c3e66df69db7e5f",
+      "bytes": 54795,
+      "matches": true
+    },
+    {
+      "path": "data/models/planning/final/verification.csv",
+      "sha256": "afb9d932e145fe758a6c7f3177a8c337f2b62ee79fe6fca654ef2d2a2ffc03f9",
+      "bytes": 7028,
+      "matches": true
+    }
+  ],
+  "event_simulations_added": 0,
+  "training_runs_added": 0,
+  "replay": {
+    "fresh_deterministic_episodes": 4,
+    "stages": 16,
+    "actions_verified": 32,
+    "metrics_verified": 48,
+    "max_abs_metric_difference": 2.220446049250313e-16,
+    "stored_configurations_match": true,
+    "expected_and_replayed_histories_sorted_by_evaluation_year": true,
+    "decision_year_rule": "decision_year = evaluation_year - 5",
+    "regenerated_receipt_sha256": "ab09b7e4a5aa595df713758db0f4ee32c160d94e6f2f256e8cfa077bf0916d07",
+    "receipt_byte_identical_to_pre_audit": true
+  },
+  "fixed_weights": {
+    "positive_weight_tracts": 57,
+    "tracts": 58,
+    "evaluator_bincount_exact": true,
+    "saved_weight_bincount_exact": true,
+    "tract_order_exact": true
+  },
+  "per_seed_cohorts": [
+    {
+      "experiment": "E1",
+      "path": "Medium",
+      "w": 1.0,
+      "year": 2045,
+      "fire_seed_by_tract_count_exact": true,
+      "other_seed_by_tract_count_exact": true
+    },
+    {
+      "experiment": "E1",
+      "path": "High",
+      "w": 1.0,
+      "year": 2045,
+      "fire_seed_by_tract_count_exact": true,
+      "other_seed_by_tract_count_exact": true
+    },
+    {
+      "experiment": "E1",
+      "path": "High",
+      "w": 0.0,
+      "year": 2035,
+      "fire_seed_by_tract_count_exact": true,
+      "other_seed_by_tract_count_exact": true
+    },
+    {
+      "experiment": "E1",
+      "path": "High",
+      "w": 0.0,
+      "year": 2045,
+      "fire_seed_by_tract_count_exact": true,
+      "other_seed_by_tract_count_exact": true
+    },
+    {
+      "experiment": "E2",
+      "path": "Medium",
+      "w": 0.0,
+      "year": 2040,
+      "fire_seed_by_tract_count_exact": true,
+      "other_seed_by_tract_count_exact": true
+    },
+    {
+      "experiment": "E2",
+      "path": "Medium",
+      "w": 0.0,
+      "year": 2045,
+      "fire_seed_by_tract_count_exact": true,
+      "other_seed_by_tract_count_exact": true
+    },
+    {
+      "experiment": "E2",
+      "path": "Medium",
+      "w": 1.0,
+      "year": 2040,
+      "fire_seed_by_tract_count_exact": true,
+      "other_seed_by_tract_count_exact": true
+    },
+    {
+      "experiment": "E2",
+      "path": "Medium",
+      "w": 1.0,
+      "year": 2045,
+      "fire_seed_by_tract_count_exact": true,
+      "other_seed_by_tract_count_exact": true
+    }
+  ],
+  "verification_reproduction": {
+    "checks": [
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "learned",
+        "metric": "D_F",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "learned",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "learned",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "greedy",
+        "metric": "D_F",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "greedy",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "greedy",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "learned",
+        "metric": "D_F",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "learned",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "learned",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "greedy",
+        "metric": "D_F",
+        "absolute_difference": 4.440892098500626e-16,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "greedy",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "Medium",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "greedy",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "learned",
+        "metric": "D_F",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "learned",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "learned",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "greedy",
+        "metric": "D_F",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "greedy",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2035,
+        "policy": "greedy",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "configuration identity reuse"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "learned",
+        "metric": "D_F",
+        "absolute_difference": 2.220446049250313e-16,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "learned",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "learned",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "greedy",
+        "metric": "D_F",
+        "absolute_difference": 4.440892098500626e-16,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "greedy",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 1.0,
+        "year": 2045,
+        "policy": "greedy",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2035,
+        "policy": "learned",
+        "metric": "D_F",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2035,
+        "policy": "learned",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2035,
+        "policy": "learned",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2035,
+        "policy": "greedy",
+        "metric": "D_F",
+        "absolute_difference": 4.440892098500626e-16,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2035,
+        "policy": "greedy",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2035,
+        "policy": "greedy",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2045,
+        "policy": "learned",
+        "metric": "D_F",
+        "absolute_difference": 2.220446049250313e-16,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2045,
+        "policy": "learned",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2045,
+        "policy": "learned",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2045,
+        "policy": "greedy",
+        "metric": "D_F",
+        "absolute_difference": 2.220446049250313e-16,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2045,
+        "policy": "greedy",
+        "metric": "M_F",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      },
+      {
+        "path": "High",
+        "w": 0.0,
+        "year": 2045,
+        "policy": "greedy",
+        "metric": "M_O",
+        "absolute_difference": 0.0,
+        "level_source": "raw NPZ reaggregation"
+      }
+    ],
+    "max_abs_difference_by_metric": {
+      "D_F": 4.440892098500626e-16,
+      "M_F": 0.0,
+      "M_O": 0.0
+    }
+  },
+  "simulator_targets": {
+    "M_F": {
+      "reference": 6.698115377209877,
+      "rows": 24,
+      "minimum": 6.698115377209877,
+      "maximum": 6.698115377209877,
+      "max_abs_difference_from_saved_reference": 0.0
+    },
+    "M_O": {
+      "reference": 6.001014500692117,
+      "rows": 24,
+      "minimum": 6.001014500692117,
+      "maximum": 6.001014500692117,
+      "max_abs_difference_from_saved_reference": 0.0
+    }
+  },
+  "raw_provenance": {
+    "raw_files": 225,
+    "logged_groups": 105,
+    "sum_logged_simulated": 225,
+    "all_groups_generated_every_required_configuration": true,
+    "run_log_created_utc": "2026-11-16T19:02:40.803833+00:00",
+    "manifest_created_utc": "2026-11-16T19:03:10.239985+00:00",
+    "first_raw_birth_utc": "2026-11-16T19:03:53.511521+00:00",
+    "last_raw_modified_utc": "2026-11-16T19:25:05.208813+00:00",
+    "completion_summary_modified_utc": "2026-11-16T19:25:07.832452+00:00",
+    "all_raw_created_after_manifest_and_before_completion": true,
+    "timestamp_basis": "Original macOS filesystem birth and modification times; JSONL rows have no embedded timestamps.",
+    "raw_hash_receipt_sha256": "8010b5c0a52f156cec3e6def31ff0b992f98585424ee6221c440d9e9afdd4064"
+  },
+  "waiting": {
+    "original_verification_fire_rows": 24,
+    "original_fire_waiting_all_zero": true,
+    "original_other_waiting_column_available": false,
+    "raw_fire_and_other_first_dispatch_waiting_all_zero": true,
+    "raw_files_checked": 225,
+    "simulated_uses_original_runs_index_and_returns_same_table": true,
+    "source_index_reorder_calls": 0,
+    "statistic": "First-dispatched run delayed by more than one second, among arriving tract-located incidents.",
+    "limit": "Raw NPZ files do not retain run-level timestamps or delay arrays; zero saved counts do not establish absence of every queued run."
+  },
+  "source_anchors": [
+    {
+      "path": "code/dispatch_simulator/planning.py",
+      "matches": [
+        {
+          "line": 35,
+          "text": "KAPPA = 10.0                                                # [DESIGN] reward penalty per minute of regional mean above its 2025 level (frozen after validation)"
+        }
+      ]
+    },
+    {
+      "path": "code/dispatch_simulator/planning.py",
+      "matches": [
+        {
+          "line": 36,
+          "text": "TARGET_TOLERANCE_MIN = 0.05                                 # [DESIGN] a year violates the mean target when M exceeds M_2025 by more than this (half the 0.1 min the study interprets)"
+        }
+      ]
+    },
+    {
+      "path": "code/dispatch_simulator/planning.py",
+      "matches": [
+        {
+          "line": 350,
+          "text": "self.fire_tract_rate = np.bincount(self.tract, weights=self.rates[0], minlength=self.tracts)   # fixed: fire demand does not grow"
+        }
+      ]
+    },
+    {
+      "path": "code/dispatch_simulator/planning.py",
+      "matches": [
+        {
+          "line": 877,
+          "text": "fire_weight = np.bincount(inputs[\"points\"][\"tract\"], weights=inputs[\"points\"][\"fire_rate\"], minlength=n_tracts)"
+        }
+      ]
+    },
+    {
+      "path": "code/dispatch_simulator/environment.py",
+      "matches": [
+        {
+          "line": 1114,
+          "text": "simulated = pd.DataFrame(np.nan, index=runs.index, columns=TIME_COLUMNS)"
+        }
+      ]
+    },
+    {
+      "path": "code/dispatch_simulator/environment.py",
+      "matches": [
+        {
+          "line": 1295,
+          "text": "return simulated"
+        }
+      ]
+    },
+    {
+      "path": "code/dispatch_simulator/planning.py",
+      "matches": [
+        {
+          "line": 853,
+          "text": "delay = simulated[\"dispatched_at\"] - scenario[\"runs\"][\"dispatched_at\"]           # seconds a run waited beyond its copied dispatch time"
+        }
+      ]
+    },
+    {
+      "path": "code/dispatch_simulator/planning.py",
+      "matches": [
+        {
+          "line": 854,
+          "text": "first_dispatch = runs.assign(delay=delay.to_numpy()).dropna(subset=[\"dispatched_at\", \"lon\"]).sort_values(\"dispatched_at\").groupby(\"incident_id\").head(1)"
+        }
+      ]
+    },
+    {
+      "path": "code/dispatch_simulator/planning.py",
+      "matches": [
+        {
+          "line": 855,
+          "text": "waited = set(first_dispatch.loc[first_dispatch[\"delay\"] > 1.0, \"incident_id\"])"
+        }
+      ]
+    },
+    {
+      "path": "code/dispatch_simulator/scenarios.py",
+      "matches": [
+        {
+          "line": 118,
+          "text": "blocks = blocks[blocks[\"POP100\"] > 0].reset_index(drop=True)"
+        },
+        {
+          "line": 304,
+          "text": "calls = calls.sort_values(\"received_s\", kind=\"stable\").reset_index(drop=True)"
+        },
+        {
+          "line": 374,
+          "text": "changed = calls[~other | (rng.random(len(calls)) < factor)].reset_index(drop=True)"
+        },
+        {
+          "line": 389,
+          "text": "changed = pd.concat([calls, extra], ignore_index=True).sort_values(\"received_s\", kind=\"stable\").reset_index(drop=True)"
+        },
+        {
+          "line": 495,
+          "text": "return pd.concat([calls, extra], ignore_index=True).sort_values(\"received_s\", kind=\"stable\").reset_index(drop=True), surges"
+        },
+        {
+          "line": 580,
+          "text": "return pd.concat([calls, extra], ignore_index=True).sort_values(\"received_s\", kind=\"stable\").reset_index(drop=True)"
+        },
+        {
+          "line": 624,
+          "text": "table = dispatches.loc[copied[\"source_row\"]].reset_index(drop=True)"
+        },
+        {
+          "line": 625,
+          "text": "runs = record_runs.loc[copied[\"source_row\"]].reset_index(drop=True)"
+        },
+        {
+          "line": 645,
+          "text": "stand_in = dispatches.iloc[[0] * len(outages)].reset_index(drop=True)"
+        },
+        {
+          "line": 668,
+          "text": "table, runs = table.iloc[order].reset_index(drop=True), runs.iloc[order].reset_index(drop=True)"
+        }
+      ]
+    },
+    {
+      "path": "code/dispatch_simulator/planning.py",
+      "matches": [
+        {
+          "line": 786,
+          "text": "planned_scenario = dict(scenario)"
+        }
+      ]
+    }
+  ],
+  "reward_constants": {
+    "KAPPA": 10.0,
+    "tolerance_min": 0.05,
+    "location": "code/dispatch_simulator/planning.py",
+    "KAPPA_in_setup_json": false,
+    "interpretation": "Reward penalizes excess above the target; the reporting tolerance is separate."
+  },
+  "status": "passed",
+  "original_manifest_and_wrapper_preserved": true
+}

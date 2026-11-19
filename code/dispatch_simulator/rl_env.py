@@ -2,14 +2,18 @@
 
 Each episode samples a training day, a seed and a condition (nominal, more calls, a short surge, engines out, a closed
 station or a large fire), builds that day's scenario and runs the simulator. Every dispatch decision of the day goes to
-the agent: it picks one of the CANDIDATES closest eligible free engines. The simulator runs in a thread; the policy
+the agent: it picks one of CANDIDATES eligible free engines, the protocol's engine first and the closest other engines
+after it, so that the protocol is always the first action. The simulator runs in a thread; the policy
 callback hands the observation to the agent and waits for its action, so environment.simulate is used unchanged.
 
-- Observation: 207 numbers that describe the call, the time, the system (coverage and the estimated cost of the runs
-  still on their way), the five candidates and every engine, built only from what is known at the decision moment.
+- Observation: 208 numbers that describe the call, the time, the system (coverage, the estimated cost of the runs
+  still on their way and the share of quints free), the five candidates and every engine, built only from what is known
+  at the decision moment.
 - Reward: each arrival of an engine at a call of the day costs w_class x (minutes from the call to the arrival) / 10;
   a call's later arrivals cost LATER_ARRIVAL_WEIGHT times as much; a call released while waiting with no engine costs
-  its wait. Outage stand-ins are not calls and cost nothing. Almost half of the arrivals come after the next decision,
+  its wait. Each dispatch also costs its engine type as the protocol prices it (type_cost): an elevator call without a
+  quint, a brush fire with a quint, or another call with a quint costs the protocol's quint penalty in seconds. Outage
+  stand-ins are not calls and cost nothing. Almost half of the arrivals come after the next decision,
   so a potential-based term moves each sent run's estimated cost to the decision that sent it: the potential is minus
   the estimated cost of the runs still on their way. The term keeps the discounted objective's ordering of policies.
 - Episode: the six hours before the day are simulated under the protocol (warm-up); the episode ends at the first
@@ -32,7 +36,7 @@ from policies import closest_engine
 from scenarios import (SURGE_EXTRA_CALLS, add_demand_growth, add_large_fires, add_outages, add_short_surges, build_scenario,
                        close_station, generate_calls)
 
-CANDIDATES = 5                                              # [DESIGN] K: the action ranks the five closest eligible free engines
+CANDIDATES = 5                                              # [DESIGN] K: the action picks the protocol's engine or one of the four closest other eligible free engines
 WARMUP_HOURS = 6                                            # [DESIGN] hours before the day simulated under the protocol, so engines start the day realistically
 TAIL_HOURS = 6                                              # [DESIGN] hours after the day kept in the scenario, so that a decision after midnight exists (the night hours 0-6 hold about 14 calls of a day)
 REWARD_UNIT_MIN = 10.0                                      # [DESIGN] rewards are counted in units of ten minutes
@@ -46,7 +50,7 @@ GROWTH_FACTORS = [1.1, 1.3, 1.5]                            # [DESIGN] demand fa
 OUTAGE_COUNTS = [1, 2, 3]                                   # [PLACEHOLDER] engines out of service in the "engines out" condition
 FIRST_DAY, LAST_DAY = 1, 180                                # [DESIGN] episode days, so that the day before and after are also training days
 ELEVATOR_PROTOCOL = "F56"                                   # [SOURCE] MPDS protocol of elevator calls, which CAD treats as a quint call
-OBSERVATION_SIZE = 207                                      # [DESIGN] call 12 + time 3 + system 7 + candidates 5 x 8 + engines 29 x 5
+OBSERVATION_SIZE = 208                                      # [DESIGN] call 12 + time 3 + system 8 + candidates 5 x 8 + engines 29 x 5
 PENDING_INDEX = 21                                          # [DESIGN] position of the estimated cost of the runs on their way (the last system number)
 
 
@@ -69,8 +73,8 @@ def fit_rl_inputs(world, verbose=VERBOSE):
         finite readiness tools for the fire and the non-fire surface); cells_F, cells_N (the cells with their call
         shares); hour_share_F, hour_share_N; lambda_scale (the largest cell share x hour share over both surfaces);
         turnout_s (the median recorded turnout of the training months, used to estimate when an engine on its way will
-        arrive); class_shares (the share of training-month runs in each call class); engine_is_gfr and engine_position
-        (per engine, in the engines table's order); in_service_from_s, in_service_to_s (each engine's service dates in
+        arrive); class_shares (the share of training-month runs in each call class); engine_is_gfr, engine_is_quint and
+        engine_position (per engine, in the engines table's order); in_service_from_s, in_service_to_s (each engine's service dates in
         seconds since DAY_ZERO).
     Example
         rl = fit_rl_inputs(world, verbose=False)
@@ -98,6 +102,7 @@ def fit_rl_inputs(world, verbose=VERBOSE):
           "lambda_scale": max(share_F.max() * hour_share_F.max(), share_N.max() * hour_share_N.max()),
           "turnout_s": float(turnout.median()), "class_shares": class_shares,
           "engine_is_gfr": (engines["engine_agency"] == "GFR").to_numpy(),
+          "engine_is_quint": world["quint_indicator"].reindex(engines["engine_id"]).fillna(0.0).to_numpy() > 0,
           "engine_position": pd.Series(np.arange(len(engines)), index=engines["engine_id"]),
           "in_service_from_s": (engines["in_service_from"] - DAY_ZERO).dt.total_seconds().to_numpy(),
           "in_service_to_s": (engines["in_service_to"] - DAY_ZERO).dt.total_seconds().to_numpy()}
@@ -159,8 +164,9 @@ def prepare_scenario(world, rl, scenario):
         A dict of arrays indexed by run row: call_received_s, dispatch_s (the run's dispatch time in the scenario,
         seconds since DAY_ZERO), call_class, elevator, brush, in_gfr, share_F, share_N (the call cell's share of fire and
         non-fire calls), incident (an integer code per call), weight (the class weight), in_day (whether the call was
-        received during the day), stand_in (whether the run is an outage stand-in), plus rows_of_incident (the run rows
-        of each incident code).
+        received during the day), stand_in (whether the run is an outage stand-in), penalty_s (the protocol's quint
+        penalty for the run's call type, seconds), plus rows_of_incident (the run rows of each incident code) and
+        quint_engines (the ids of the quints).
     Example
         prepared = prepare_scenario(world, rl, scenario); prepared["call_class"][:5] -> e.g. [1, 3, 3, 2, 1]
     """
@@ -182,7 +188,9 @@ def prepare_scenario(world, rl, scenario):
             "incident": incident, "rows_of_incident": rows_of_incident,
             "weight": np.array([CLASS_WEIGHTS[CALL_CLASSES[c]] for c in call_class]),
             "in_day": (received >= scenario["day_start_s"]) & (received < scenario["day_end_s"]),
-            "stand_in": table["protocol"].eq(OUT_OF_SERVICE_PROTOCOL).fillna(False).to_numpy(dtype=bool)}
+            "stand_in": table["protocol"].eq(OUT_OF_SERVICE_PROTOCOL).fillna(False).to_numpy(dtype=bool),
+            "penalty_s": scenario["quint_penalty"].to_numpy(dtype=float),
+            "quint_engines": set(world["quint_indicator"][world["quint_indicator"] > 0].index)}
 
 
 def minutes_until_home(world, scenario, engine_id, last_clear, now):
@@ -220,15 +228,17 @@ def observe(world, rl, scenario, prepared, run, available, travel_s, context, di
                      estimated cost from estimated_cost)
     Output
         Three objects: the observation (float32 array of OBSERVATION_SIZE numbers, in the order call, time, system,
-        candidates, engines), the action mask (bool array of CANDIDATES) and the candidate engine ids, closest first
-        (list of str). The system block ends with the estimated cost of the runs on their way / 10 (PENDING_INDEX).
+        candidates, engines), the action mask (bool array of CANDIDATES) and the candidate engine ids: the protocol's
+        engine first, then the other eligible free engines closest first (list of str). The system block ends with the estimated cost of the runs on their way / 10 (PENDING_INDEX) and
+        the share of quints free.
     Example
         observation, mask, candidates = observe(world, rl, scenario, prepared, run, available, travel_s, context, {})
-        observation.shape, mask, candidates[:2] -> ((207,), [True, True, True, True, True], ['E62', 'E3'])
+        observation.shape, mask, candidates[:2] -> ((208,), [True, True, True, True, True], ['E62', 'E3'])
     """
     now, row, simulated, engine_state = context["now"], run.name, context["simulated"], context["engine_state"]
     eligible = travel_s[available].dropna().sort_values(kind="stable")
-    candidates = list(eligible.index[:CANDIDATES])
+    protocol_engine = closest_engine(world, scenario, run, available, travel_s)
+    candidates = [protocol_engine] + [engine_id for engine_id in eligible.index if engine_id != protocol_engine][:CANDIDATES - 1]
     closest_min = float(eligible.iloc[0]) / 60
     arrived, responding, remaining = 0, 0, []
     for other in prepared["rows_of_incident"][prepared["incident"][row]]:
@@ -255,7 +265,7 @@ def observe(world, rl, scenario, prepared, run, available, travel_s, context, di
     arrived_at, cleared_at = simulated["arrived_at"].to_numpy(dtype=float), simulated["cleared_at"].to_numpy(dtype=float)
     pending = sum(cost for other, (_, _, cost) in dispatched.items() if cost and np.isnan(arrived_at[other]) and np.isnan(cleared_at[other]))
     system = [len(available) / len(idle), min(context["waiting_runs"], 10) / 10, readiness_F / 10, readiness_N / 10, uncovered_F,
-              uncovered_N, pending / 10]
+              uncovered_N, pending / 10, rl["engine_is_quint"][idle].sum() / rl["engine_is_quint"].sum()]
     effects_F = rl["opportunity_F"](available, candidates, uncovered=True)
     effects_N = rl["opportunity_N"](available, candidates, uncovered=True)
     in_gfr = prepared["in_gfr"][row]
@@ -286,6 +296,36 @@ def observe(world, rl, scenario, prepared, run, available, travel_s, context, di
     observation = np.array(call + time + system + slots + engines_block, dtype=np.float32)
     mask = np.array([slot < len(candidates) for slot in range(CANDIDATES)])
     return observation, mask, candidates
+
+
+def type_cost(prepared, dispatched, row, engine_id):
+    """Price the engine type of a dispatch as the protocol does, so that dropping the quint rule is not free.
+
+    The protocol ranks a quint as if its travel were longer by the call type's quint penalty (shorter when the penalty is
+    negative). As a cost: an elevator call (penalty -260 s) costs 260 s when the engine sent is not a quint, a brush fire
+    (+260 s) costs 260 s when it is a quint, and any other call (+10 s) costs 10 s when it is a quint. It is a chosen type
+    preference, priced as CAD's choices imply. On the costs known at the decision (the estimated arrival cost plus this
+    type cost) the protocol's engine is the cheapest for the current call; the realized reward can differ, because travel
+    is drawn after the choice, a call's later arrivals are weighted by arrival order, and costs that come later are
+    discounted.
+
+    Input
+        prepared   : the scenario's prepared arrays (dict from prepare_scenario)
+        dispatched : the runs sent earlier (any container of run rows: membership is read)
+        row        : the run being sent (int); engine_id : the engine sent (str)
+    Output
+        weight x share x the type cost in seconds / 60 / 10 (float, reward units, zero or positive); share is 1 for the
+        first engine sent to the call and LATER_ARRIVAL_WEIGHT otherwise, as for its arrival; 0 for a run outside the day
+        or an outage stand-in.
+    Example
+        type_cost(prepared, {}, row_of_an_elevator_call, "E3") -> 0.433 for a medical call (weight 1): 260 / 600
+    """
+    if not prepared["in_day"][row] or prepared["stand_in"][row]:
+        return 0.0
+    penalty = prepared["penalty_s"][row]
+    cost_s = max(penalty, 0.0) if engine_id in prepared["quint_engines"] else max(-penalty, 0.0)
+    first = not any(other in dispatched for other in prepared["rows_of_incident"][prepared["incident"][row]] if other != row)
+    return prepared["weight"][row] * (1.0 if first else LATER_ARRIVAL_WEIGHT) * cost_s / 60 / REWARD_UNIT_MIN
 
 
 def estimated_cost(rl, prepared, dispatched, row, now, modeled_s):
@@ -399,8 +439,8 @@ class DispatchEnv(gym.Env):
         action_masks() gives the mask. At the end of an episode, info holds the unshaped return, the number of
         decisions, how many decisions sent another engine than the protocol would, and end_s: the time of the decision
         after midnight that ends the episode, or inf when the scenario ran out of calls (releases from that second on
-        are not counted). At the current decision, protocol_engine is the protocol's engine and protocol_slot its slot
-        (None when that engine is not among the candidates). reset(options={"scenario": s, "full_day": True}) replays a
+        are not counted). At the current decision, protocol_engine is the protocol's engine, protocol_slot its slot
+        (always 0) and closest_slot the slot of the engine with the least modeled travel (in a tie, the first listed). reset(options={"scenario": s, "full_day": True}) replays a
         given scenario and lets the agent decide every call to its end, so that two policies can be compared on the
         same calls; the episode then ends when the scenario runs out of calls.
     Example
@@ -411,7 +451,7 @@ class DispatchEnv(gym.Env):
         super().__init__()
         self.world, self.generator, self.rl, self.shaping = world, generator, rl, shaping
         self.rng = np.random.default_rng(seed)
-        assert 12 + 3 + 7 + 8 * CANDIDATES + 5 * len(rl["engine_position"]) == OBSERVATION_SIZE, "the observation layout changed"
+        assert 12 + 3 + 8 + 8 * CANDIDATES + 5 * len(rl["engine_position"]) == OBSERVATION_SIZE, "the observation layout changed"
         self.observation_space = gym.spaces.Box(low=-np.inf, high=np.inf, shape=(OBSERVATION_SIZE,), dtype=np.float32)
         self.action_space = gym.spaces.Discrete(CANDIDATES)
         self.thread, self.stopping = None, False
@@ -427,6 +467,7 @@ class DispatchEnv(gym.Env):
             observation, mask, candidates = observe(world, self.rl, scenario, self.prepared, run, available, travel_s, context, self.dispatched)
             self.candidates, self.protocol_engine = candidates, closest_engine(world, scenario, run, available, travel_s)
             self.protocol_slot = candidates.index(self.protocol_engine) if self.protocol_engine in candidates else None
+            self.closest_slot = candidates.index(travel_s[available].dropna().idxmin())   # ties: the first engine in table order, as the stable sort ranks it
             self.outbox.put(("decision", observation, mask, now))
             action = self.inbox.get()
             if action is None:
@@ -434,6 +475,7 @@ class DispatchEnv(gym.Env):
             engine_id = candidates[min(int(action), len(candidates) - 1)]
         if engine_id is not None:
             modeled_s = float(travel_s[engine_id])
+            self.type_costs += type_cost(self.prepared, self.dispatched, run.name, engine_id)   # charged on the transition of this decision
             self.dispatched[run.name] = (now, modeled_s, estimated_cost(self.rl, self.prepared, self.dispatched, run.name, now, modeled_s))
         return engine_id
 
@@ -469,7 +511,7 @@ class DispatchEnv(gym.Env):
         while True:                                                 # a sampled scenario without any decision is drawn again
             self.scenario = given or sample_scenario(self.world, self.generator, self.rng)
             self.prepared = prepare_scenario(self.world, self.rl, self.scenario)
-            self.dispatched, self.tally = {}, new_tally(self.prepared)
+            self.dispatched, self.tally, self.type_costs = {}, new_tally(self.prepared), 0.0
             self.outbox, self.inbox = queue.Queue(), queue.Queue()
             self.thread = threading.Thread(target=self._run, daemon=True)
             self.thread.start()
@@ -494,6 +536,7 @@ class DispatchEnv(gym.Env):
         terminated = kind == "finished"                             # the scenario ran out of calls: nothing follows
         truncated = kind == "decision" and now >= self.scenario["day_end_s"] and not self.full_day
         reward = accrued_reward(self.prepared, self.simulated, self.tally, now)   # releases in this decision's second wait for the next count (at truncation, for the bootstrap)
+        reward, self.type_costs = reward - self.type_costs, 0.0     # the engine types sent since the last decision, this one included
         self.unshaped += reward
         if kind == "decision":
             self.observation, self.mask = observation, mask

@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Policy outcomes from the approximate queueing evaluator on 48 new growth draws. Each draw contains four evaluations (2030, 2035, 2040, and 2045); outcomes are averaged over those years and draws. $D_F$ is the fixed-fire-rate-weighted standard deviation of tract mean fire travel times; $M_F$ and $M_O$ are regional mean travel times for study-fire and other calls. All three are in minutes. Return sums the four original stage rewards; higher is better. Each stage cost is $D_F$ plus ten times the positive excess of each mean above its 2025 target (6.6962 min for fire and 5.9992 min for other calls). The penalty starts at zero excess. Actions count station and vehicle planning changes per draw. A target violation occurs when either mean exceeds its own 2025 baseline by more than 0.05 min. No action retains the initial configuration; the Station 9 policy moves that station once; stage greedy chooses the feasible action pair with the lowest next-stage cost; frozen PPO applies the trained proximal policy optimization policy. Greedy and PPO share stage action limits. Gains against no action combine location changes and fleet additions.}
+\label{tab:fast_policy_levels}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrr}
+\toprule
+Policy & $D_F$ & $M_F$ & $M_O$ & Return & Actions & Violations \\
+\midrule
+No action & 1.872 & 6.711 & 6.056 & -10.398 & 0.0 & 113/192 \\
+Modeled Station 9 relocation & 1.825 & 6.764 & 6.109 & -14.427 & 1.0 & 185/192 \\
+Stage greedy & 1.662 & 6.597 & 5.967 & -6.657 & 8.0 & 0/192 \\
+Frozen PPO & 1.667 & 6.558 & 5.942 & -6.675 & 8.0 & 0/192 \\
+\bottomrule
+\end{tabular}
+\end{table}

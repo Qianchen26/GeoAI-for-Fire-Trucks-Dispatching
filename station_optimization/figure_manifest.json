@@ -1,0 +1,187 @@
+{
+  "format": "standalone-single-panel",
+  "main_count": 6,
+  "supplementary_count": 12,
+  "figures": [
+    {
+      "filename": "figures/fig01_study_area.pdf",
+      "png": "figures/fig01_study_area.png",
+      "block": "fig01_study_area",
+      "label": "fig:study_area",
+      "role": "main",
+      "order": 1,
+      "caption_number": "1",
+      "caption": "**Figure 1. Population and modeled station locations in Alachua County.** Estimated 2025 population is divided by the total area of each 2020 census tract. Triangles show the 25 modeled 2025 station/base locations, with 23 engines and five quints. The dashed 2026 Gainesville boundary provides geographic context. The study covers 58 tracts, including 57 with positive baseline study-fire rates. The population-density map uses a logarithmic scale and UTM zone 17N."
+    },
+    {
+      "filename": "figures/framework.pdf",
+      "png": "figures/framework.png",
+      "block": "fig02_framework",
+      "label": "fig:framework",
+      "role": "main",
+      "order": 2,
+      "caption_number": "2",
+      "caption_source": "framework agent"
+    },
+    {
+      "filename": "figures/fig06_policy_means.pdf",
+      "png": "figures/fig06_policy_means.png",
+      "block": "fig06_policy_means",
+      "label": "fig:policy_means",
+      "role": "main",
+      "order": 3,
+      "caption_number": "3",
+      "caption": "**Figure 3. Regional mean travel under PPO and stage greedy.** Circles and 95% intervals use 2,000 paired bootstrap samples of 15 whole event streams (seeds 101\u2013115); diamonds show the saved fast-evaluator differences. The six scenario\u2013year checks pair Medium trend (w = 1), High trend (w = 1), and High proportional growth (w = 0) with 2035 and 2045. D_F is the fixed-fire-rate-weighted standard deviation of tract mean fire travel; M_F and M_O are incident-level regional means for study-fire and other calls. Travel is en route to arrival. Negative differences favor PPO. The two trend configurations match in 2035; High proportional 2035 uses a different vehicle mix. All three 2045 regional mean contrasts favor PPO. Shared stage action-count limits allow different final fleets because a new station includes an engine. In 2045, PPO/greedy have 30/29 engines and 5/5 quints under Medium trend; 31/28 engines and 5/6 quints under High trend; and 30/29 engines and 6/6 quints under High proportional growth. The contrasts combine location, fleet-size, and fleet-type choices. Some other-call intervals are narrower than their markers."
+    },
+    {
+      "filename": "figures/fig07_spatial_policy_diff.pdf",
+      "png": "figures/fig07_spatial_policy_diff.png",
+      "block": "fig07_spatial_policy_diff",
+      "label": "fig:spatial_policy_diff",
+      "role": "main",
+      "order": 4,
+      "caption_number": "4",
+      "caption": "**Figure 4. Local fire-travel consequences: PPO versus stage greedy.** The 2045 Medium scenario uses historical-trend population allocation (w = 1). Differences compare frozen PPO with stage greedy, using tract means pooled over 15 paired E1 event streams. Travel is first-arriving eligible vehicle travel from en route to arrival. Negative values favor PPO. The symmetric color range is \u00b1120 s, shared with the other scenarios for this comparison. Annotations sum fixed baseline fire-rate weights in faster, slower, and unchanged tracts; differences within 10\u207b\u00b9\u2070 min count as numerical equality. These categories use point estimates. The policies share stage action-count limits and select different final locations and fleets."
+    },
+    {
+      "filename": "figures/fig08_e2_growth.pdf",
+      "png": "figures/fig08_e2_growth.png",
+      "block": "fig08_e2_growth",
+      "label": "fig:e2_growth",
+      "role": "main",
+      "order": 5,
+      "caption_number": "5",
+      "caption": "**Figure 5. Spatial growth and the engine-addition decision in E2.** The Medium county path uses historical-trend allocation (S1, w = 1). Triangles show the common configuration immediately after the shared GFR_01 relocation to C18. The subsequent vehicle decision chooses between A, adding an engine at the E62 modeled base, and B, adding an engine at CO_29. Gold marks the frozen PPO choice. Both states have the same county population and resource configuration; S0 applies uniform proportional growth and selects A, while S1 selects B. Their growth maps share the same scale. Fire rates remain fixed; population changes affect non-fire workload."
+    },
+    {
+      "filename": "figures/fig05_e2_case.pdf",
+      "png": "figures/fig05_e2_case.png",
+      "block": "fig05_e2_case",
+      "label": "fig:e2_case",
+      "role": "main",
+      "order": 6,
+      "caption_number": "6",
+      "caption": "**Figure 6. Action consequences in the matched E2 states.** A adds an engine at the E62 modeled base; B adds one at CO_29. S0 uses proportional growth (w = 0), and S1 uses historical-trend allocation (w = 1), with the same Medium county population and post-relocation resource configuration. Each point averages the 2040 and 2045 outcomes. Circles and 95% intervals use 2,000 paired bootstrap samples of 15 whole event streams (seeds 101\u2013115); diamonds show the saved fast-evaluator differences. Each bootstrap sample uses the same stream indices in both years. D_F is the fixed-fire-rate-weighted standard deviation of tract mean fire travel; M_F and M_O are incident-level regional means for study-fire and other calls. Travel is en route to arrival. The frozen continuations all build at C12 and add an engine at CO_29 in 2040. The original fast reward favors A in S0 through a smaller other-call penalty, and B in S1 through lower dispersion with zero regional-mean penalties. The reward hinge starts at the exact 2025 baseline; the 0.05-min tolerance applies to violation reporting. Simulator D_F and M_F intervals cross zero in both states, while M_O favors A in both."
+    },
+    {
+      "filename": "figures/fig03_policy_results.pdf",
+      "png": "figures/fig03_policy_results.png",
+      "block": "fig03_policy_results",
+      "label": "fig:policy_results",
+      "role": "supplement",
+      "order": 1,
+      "caption_number": "S1",
+      "caption": "**Figure S1. E1 differences in spatial fire-travel dispersion.** Circles and 95% intervals use 2,000 paired bootstrap samples of 15 whole event streams (seeds 101\u2013115); diamonds show the saved fast-evaluator differences. The six scenario\u2013year checks pair Medium trend (w = 1), High trend (w = 1), and High proportional growth (w = 0) with 2035 and 2045. D_F is the fixed-fire-rate-weighted standard deviation of tract mean fire travel; M_F and M_O are incident-level regional means for study-fire and other calls. Travel is en route to arrival. Negative differences favor PPO. The two trend configurations match in 2035; High proportional 2035 uses a different vehicle mix. All four nonidentical simulator dispersion intervals cross zero. Event-stream intervals describe variation within each scenario\u2013year and exclude evaluator discrepancy."
+    },
+    {
+      "filename": "figures/fig04_spatial_consequences.pdf",
+      "png": "figures/fig04_spatial_consequences.png",
+      "block": "fig04_spatial_consequences",
+      "label": "fig:spatial_consequences",
+      "role": "supplement",
+      "order": 2,
+      "caption_number": "S2",
+      "caption": "**Figure S2. Local fire-travel consequences: PPO versus no action.** The 2045 Medium scenario uses historical-trend population allocation (w = 1). Differences compare frozen PPO with no action, using saved fast-evaluator tract means. Travel is first-arriving eligible vehicle travel from en route to arrival. Negative values favor PPO. The symmetric color range is \u00b1160 s, shared with the other scenarios for this comparison. Annotations sum fixed baseline fire-rate weights in faster, slower, and unchanged tracts; differences within 10\u207b\u00b9\u2070 min count as numerical equality. These categories use point estimates. No action retains the initial 25 locations and 28 vehicles."
+    },
+    {
+      "filename": "figures/supp03_growth_draws.pdf",
+      "png": "figures/supp03_growth_draws.png",
+      "block": "supp03_growth_draws",
+      "label": "fig:growth_draws",
+      "role": "supplement",
+      "order": 3,
+      "caption_number": "S3",
+      "caption": "**Figure S3. Policy contrasts across 48 held-out growth draws.** Squares show fast-evaluator differences in the mean of four evaluation years (2030, 2035, 2040, 2045), averaged over 48 held-out growth draws. Intervals are the existing 95% paired bootstrap intervals over whole draws. D_F is the fixed-fire-rate-weighted standard deviation of tract mean fire travel; M_F and M_O are incident-level regional means for study-fire and other calls. Travel is en route to arrival. Negative values favor PPO on the plotted metric. PPO has a larger D_F than stage greedy by 0.251 s (95% CI 0.164\u20130.332 s). These intervals describe growth-draw variation, distinct from the event-stream variation in E1."
+    },
+    {
+      "filename": "figures/supp04_fire_weights.pdf",
+      "png": "figures/supp04_fire_weights.png",
+      "block": "supp04_fire_weights",
+      "label": "fig:fire_weights",
+      "role": "supplement",
+      "order": 4,
+      "caption_number": "S4",
+      "caption": "**Figure S4. Spatial weights for study-fire demand.** Each tract contributes its share of the fixed study-fire rate estimated from October 2024\u2013March 2025 incidents. Study-fire calls comprise outside, structure, vehicle, and brush fires; other calls form the remaining modeled call group. These shares are county demand weights, rather than per-resident risk rates. One of the 58 tracts has zero baseline fire rate. The scenarios retain these fire rates while non-fire workload changes with population. Triangles show the initial modeled station/base locations."
+    },
+    {
+      "filename": "figures/supp05_baseline_travel.pdf",
+      "png": "figures/supp05_baseline_travel.png",
+      "block": "supp05_baseline_travel",
+      "label": "fig:baseline_travel",
+      "role": "supplement",
+      "order": 5,
+      "caption_number": "S5",
+      "caption": "**Figure S5. Baseline service under the 2030 Medium trend scenario.** The fast evaluator estimates first-arriving eligible engine/quint travel with the unchanged 2025 configuration and 2030 Medium historical-trend growth (w = 1). Travel is en route to arrival. The hatched tract has zero baseline fire rate and an undefined fire-travel mean. Triangles show the initial modeled station/base locations. The scenario keeps fire rates fixed and changes non-fire workload with population."
+    },
+    {
+      "filename": "figures/supp06_high_w1_fast.pdf",
+      "png": "figures/supp06_high_w1_fast.png",
+      "block": "supp06_high_w1_fast",
+      "label": "fig:high_w1_fast",
+      "role": "supplement",
+      "order": 6,
+      "caption_number": "S6",
+      "caption": "**Figure S6. Local fire-travel consequences: PPO versus no action.** The 2045 High scenario uses historical-trend population allocation (w = 1). Differences compare frozen PPO with no action, using saved fast-evaluator tract means. Travel is first-arriving eligible vehicle travel from en route to arrival. Negative values favor PPO. The symmetric color range is \u00b1160 s, shared with the other scenarios for this comparison. Annotations sum fixed baseline fire-rate weights in faster, slower, and unchanged tracts; differences within 10\u207b\u00b9\u2070 min count as numerical equality. These categories use point estimates. No action retains the initial 25 locations and 28 vehicles."
+    },
+    {
+      "filename": "figures/supp07_high_w1_simulation.pdf",
+      "png": "figures/supp07_high_w1_simulation.png",
+      "block": "supp07_high_w1_simulation",
+      "label": "fig:high_w1_simulation",
+      "role": "supplement",
+      "order": 7,
+      "caption_number": "S7",
+      "caption": "**Figure S7. Local fire-travel consequences: PPO versus stage greedy.** The 2045 High scenario uses historical-trend population allocation (w = 1). Differences compare frozen PPO with stage greedy, using tract means pooled over 15 paired E1 event streams. Travel is first-arriving eligible vehicle travel from en route to arrival. Negative values favor PPO. The symmetric color range is \u00b1120 s, shared with the other scenarios for this comparison. Annotations sum fixed baseline fire-rate weights in faster, slower, and unchanged tracts; differences within 10\u207b\u00b9\u2070 min count as numerical equality. These categories use point estimates. The policies share stage action-count limits and select different final locations and fleets."
+    },
+    {
+      "filename": "figures/supp08_high_w0_fast.pdf",
+      "png": "figures/supp08_high_w0_fast.png",
+      "block": "supp08_high_w0_fast",
+      "label": "fig:high_w0_fast",
+      "role": "supplement",
+      "order": 8,
+      "caption_number": "S8",
+      "caption": "**Figure S8. Local fire-travel consequences: PPO versus no action.** The 2045 High scenario uses proportional population allocation (w = 0). Differences compare frozen PPO with no action, using saved fast-evaluator tract means. Travel is first-arriving eligible vehicle travel from en route to arrival. Negative values favor PPO. The symmetric color range is \u00b1160 s, shared with the other scenarios for this comparison. Annotations sum fixed baseline fire-rate weights in faster, slower, and unchanged tracts; differences within 10\u207b\u00b9\u2070 min count as numerical equality. These categories use point estimates. No action retains the initial 25 locations and 28 vehicles."
+    },
+    {
+      "filename": "figures/supp09_high_w0_simulation.pdf",
+      "png": "figures/supp09_high_w0_simulation.png",
+      "block": "supp09_high_w0_simulation",
+      "label": "fig:high_w0_simulation",
+      "role": "supplement",
+      "order": 9,
+      "caption_number": "S9",
+      "caption": "**Figure S9. Local fire-travel consequences: PPO versus stage greedy.** The 2045 High scenario uses proportional population allocation (w = 0). Differences compare frozen PPO with stage greedy, using tract means pooled over 15 paired E1 event streams. Travel is first-arriving eligible vehicle travel from en route to arrival. Negative values favor PPO. The symmetric color range is \u00b1120 s, shared with the other scenarios for this comparison. Annotations sum fixed baseline fire-rate weights in faster, slower, and unchanged tracts; differences within 10\u207b\u00b9\u2070 min count as numerical equality. These categories use point estimates. The policies share stage action-count limits and select different final locations and fleets."
+    },
+    {
+      "filename": "figures/supp10_e2_proportional_growth.pdf",
+      "png": "figures/supp10_e2_proportional_growth.png",
+      "block": "supp10_e2_proportional_growth",
+      "label": "fig:e2_growth_s0",
+      "role": "supplement",
+      "order": 10,
+      "caption_number": "S10",
+      "caption": "**Figure S10. Spatial growth and the engine-addition decision in E2.** The Medium county path uses proportional allocation (S0, w = 0). Triangles show the common configuration immediately after the shared GFR_01 relocation to C18. The subsequent vehicle decision chooses between A, adding an engine at the E62 modeled base, and B, adding an engine at CO_29. Gold marks the frozen PPO choice. Both states have the same county population and resource configuration; S0 applies uniform proportional growth and selects A, while S1 selects B. Their growth maps share the same scale. Fire rates remain fixed; population changes affect non-fire workload."
+    },
+    {
+      "filename": "figures/supp11_e2_spatial_s0.pdf",
+      "png": "figures/supp11_e2_spatial_s0.png",
+      "block": "supp11_e2_spatial_s0",
+      "label": "fig:e2_spatial_s0",
+      "role": "supplement",
+      "order": 11,
+      "caption_number": "S11",
+      "caption": "**Figure S11. Local E2 action consequences in state S0.** The Medium county path uses w = 0. A adds an engine at E62; B adds one at CO_29. Each tract value averages its A\u2212B first-arriving fire-travel differences in 2040 and 2045, using the 15 paired event streams. Travel is en route to arrival. Negative differences favor A. Both state maps share a symmetric color scale. The resource configuration and county population match at the decision; the frozen continuations use the same 2040 actions. Hatched areas have zero baseline fire rate or a missing paired outcome."
+    },
+    {
+      "filename": "figures/supp12_e2_spatial_s1.pdf",
+      "png": "figures/supp12_e2_spatial_s1.png",
+      "block": "supp12_e2_spatial_s1",
+      "label": "fig:e2_spatial_s1",
+      "role": "supplement",
+      "order": 12,
+      "caption_number": "S12",
+      "caption": "**Figure S12. Local E2 action consequences in state S1.** The Medium county path uses w = 1. A adds an engine at E62; B adds one at CO_29. Each tract value averages its A\u2212B first-arriving fire-travel differences in 2040 and 2045, using the 15 paired event streams. Travel is en route to arrival. Negative differences favor A. Both state maps share a symmetric color scale. The resource configuration and county population match at the decision; the frozen continuations use the same 2040 actions. Hatched areas have zero baseline fire rate or a missing paired outcome."
+    }
+  ]
+}

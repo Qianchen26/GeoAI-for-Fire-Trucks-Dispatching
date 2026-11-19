@@ -1,0 +1,581 @@
+experiment,path,w,year,a,b,identical,tract,fire_weight,a_minus_b,source,a_mean,b_mean,fire_incidents
+E1,Medium,1.0,2035,learned,greedy,True,12001000201,0.02797202797202798,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000202,0.005827505827505829,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000301,0.03263403263403264,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000302,0.017482517482517487,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000400,0.03263403263403264,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000500,0.017482517482517487,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000600,0.02797202797202798,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000700,0.040792540792540806,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000806,0.0023310023310023314,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000808,0.010489510489510492,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000809,0.005827505827505829,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000901,0.0,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001000902,0.006993006993006994,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001000,0.017482517482517487,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001100,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001201,0.003496503496503497,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001202,0.017482517482517487,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001203,0.006993006993006995,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001400,0.04545454545454545,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001514,0.003496503496503497,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001515,0.01398601398601399,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001516,0.004662004662004663,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001517,0.004662004662004663,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001519,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001522,0.040792540792540806,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001605,0.025641025641025647,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001701,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001702,0.005827505827505829,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001802,0.022144522144522148,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001803,0.022144522144522148,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001811,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001813,0.005827505827505829,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001815,0.01398601398601399,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001816,0.03379953379953381,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001817,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001818,0.040792540792540806,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001819,0.03146853146853148,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001902,0.02447552447552448,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001907,0.012820512820512824,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001001908,0.04778554778554777,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002001,0.003496503496503497,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002002,0.023310023310023315,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002101,0.010489510489510492,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002102,0.00815850815850816,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002201,0.02680652680652681,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002202,0.025641025641025647,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002204,0.023310023310023315,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002207,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002208,0.004662004662004663,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002209,0.04195804195804197,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002210,0.012820512820512824,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002217,0.023310023310023315,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002218,0.00815850815850816,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002219,0.015151515151515155,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002220,0.01398601398601399,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002221,0.0023310023310023314,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001002222,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2035,learned,greedy,True,12001110800,0.0011655011655011657,0.0,configuration identity; levels reused from original verification,,,
+E1,Medium,1.0,2045,learned,greedy,False,12001000201,0.02797202797202798,0.0018696801271049779,new paired event simulation,5.5774560901418635,5.5755864100147585,313.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000202,0.005827505827505829,0.0,new paired event simulation,5.337198034515721,5.337198034515721,78.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000301,0.03263403263403264,-0.009206134974988345,new paired event simulation,4.8829199335773374,4.892126068552326,402.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000302,0.017482517482517487,0.029205570526287694,new paired event simulation,4.472319019860015,4.443113449333727,210.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000400,0.03263403263403264,-0.0014838596505128976,new paired event simulation,5.503235088336137,5.50471894798665,467.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000500,0.017482517482517487,0.017396177069994856,new paired event simulation,5.092822527330694,5.075426350260699,238.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000600,0.02797202797202798,0.0,new paired event simulation,5.116281006584054,5.116281006584054,343.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000700,0.040792540792540806,0.0005344515655361093,new paired event simulation,5.543896696576212,5.543362245010676,536.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000806,0.0023310023310023314,0.0,new paired event simulation,4.360885130773402,4.360885130773402,30.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000808,0.010489510489510492,0.012983253024296815,new paired event simulation,4.491880842431018,4.478897589406722,136.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000809,0.005827505827505829,0.0,new paired event simulation,3.828555857275427,3.828555857275427,71.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000901,0.0,,new paired event simulation,,,0.0
+E1,Medium,1.0,2045,learned,greedy,False,12001000902,0.006993006993006994,-0.07827650895447569,new paired event simulation,4.742805683684645,4.82108219263912,118.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001000,0.017482517482517487,-1.1248142314323228,new paired event simulation,4.776609355512781,5.9014235869451035,231.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001100,0.011655011655011658,0.7506374222504482,new paired event simulation,5.062110468945582,4.311473046695133,170.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001201,0.003496503496503497,0.20957913304343379,new paired event simulation,4.064094043092258,3.854514910048824,49.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001202,0.017482517482517487,0.007063653491447219,new paired event simulation,4.843217889780369,4.836154236288921,215.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001203,0.006993006993006995,-0.015940360444871793,new paired event simulation,4.3577861679822965,4.373726528427168,118.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001400,0.04545454545454545,-0.02921697118591382,new paired event simulation,6.385763479781219,6.414980450967133,603.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001514,0.003496503496503497,-0.009003086600245513,new paired event simulation,3.2243457240866706,3.233348810686916,54.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001515,0.01398601398601399,-0.003765018526310726,new paired event simulation,4.890795465318599,4.89456048384491,183.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001516,0.004662004662004663,0.0,new paired event simulation,4.839211034235791,4.839211034235791,58.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001517,0.004662004662004663,-0.0033064199884274004,new paired event simulation,4.789903494636645,4.793209914625073,71.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001519,0.011655011655011658,-0.012143355286550417,new paired event simulation,4.983004494111271,4.995147849397822,132.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001522,0.040792540792540806,-0.05918090526725184,new paired event simulation,4.098694793164491,4.157875698431742,556.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001605,0.025641025641025647,-1.1520344017230029,new paired event simulation,4.42690774668923,5.578942148412233,412.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001701,0.011655011655011658,-1.7792167721778211,new paired event simulation,5.910777058175117,7.689993830352938,137.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001702,0.005827505827505829,-0.04690248105646422,new paired event simulation,5.6716276103744745,5.718530091430939,61.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001802,0.022144522144522148,0.0018377456407820958,new paired event simulation,5.498726140928181,5.496888395287399,269.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001803,0.022144522144522148,0.0469187851802344,new paired event simulation,5.250950668744784,5.204031883564549,310.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001811,0.011655011655011658,-1.4797837995257943,new paired event simulation,8.852990390894918,10.332774190420713,148.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001813,0.005827505827505829,-0.4886904319423939,new paired event simulation,6.782228712890811,7.270919144833205,67.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001815,0.01398601398601399,-0.013854825744809673,new paired event simulation,13.421374547346906,13.435229373091715,144.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001816,0.03379953379953381,-0.029634093202291822,new paired event simulation,6.962276457870137,6.991910551072428,435.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001817,0.011655011655011658,-0.015103320489661343,new paired event simulation,6.492726635919888,6.507829956409549,156.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001818,0.040792540792540806,-0.10886204272081912,new paired event simulation,8.593990568850225,8.702852611571045,521.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001819,0.03146853146853148,-0.003216694333975312,new paired event simulation,9.039980616509458,9.043197310843434,394.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001902,0.02447552447552448,-0.0024992411428099714,new paired event simulation,5.936471303360791,5.938970544503601,348.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001907,0.012820512820512824,0.0,new paired event simulation,6.882430729134718,6.882430729134718,184.0
+E1,Medium,1.0,2045,learned,greedy,False,12001001908,0.04778554778554777,0.0012909590410252747,new paired event simulation,8.376363556378864,8.375072597337839,615.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002001,0.003496503496503497,0.0,new paired event simulation,11.704488833437855,11.704488833437855,47.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002002,0.023310023310023315,0.0,new paired event simulation,8.449581446961872,8.449581446961872,296.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002101,0.010489510489510492,0.0,new paired event simulation,10.17712443508614,10.17712443508614,128.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002102,0.00815850815850816,0.00304151703242983,new paired event simulation,7.725689376860007,7.722647859827577,99.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002201,0.02680652680652681,-0.018292019652587754,new paired event simulation,8.604240787728898,8.622532807381486,367.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002202,0.025641025641025647,0.00462739587379879,new paired event simulation,8.5739706582232,8.5693432623494,376.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002204,0.023310023310023315,-0.4704815684977799,new paired event simulation,6.490456558868864,6.960938127366644,320.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002207,0.011655011655011658,-0.0344261142378004,new paired event simulation,6.064233624056468,6.098659738294268,161.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002208,0.004662004662004663,-0.009321239586411956,new paired event simulation,6.479404685608725,6.488725925195137,44.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002209,0.04195804195804197,0.12773813685939572,new paired event simulation,9.401884186439165,9.27414604957977,529.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002210,0.012820512820512824,0.0,new paired event simulation,7.439026978961866,7.439026978961866,153.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002217,0.023310023310023315,-0.00011528460506848859,new paired event simulation,7.436140721049625,7.436256005654694,291.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002218,0.00815850815850816,0.0,new paired event simulation,7.308796182578488,7.308796182578488,98.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002219,0.015151515151515155,0.26845345089225514,new paired event simulation,6.494329321498856,6.2258758706066,163.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002220,0.01398601398601399,0.19183461685323522,new paired event simulation,6.640220749314809,6.448386132461573,196.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002221,0.0023310023310023314,0.23310172091276993,new paired event simulation,5.970120361162386,5.737018640249616,40.0
+E1,Medium,1.0,2045,learned,greedy,False,12001002222,0.011655011655011658,0.4158240161386022,new paired event simulation,6.729920419593839,6.3140964034552365,165.0
+E1,Medium,1.0,2045,learned,greedy,False,12001110800,0.0011655011655011657,0.0,new paired event simulation,4.196056752841847,4.196056752841847,17.0
+E1,High,1.0,2035,learned,greedy,True,12001000201,0.02797202797202798,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000202,0.005827505827505829,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000301,0.03263403263403264,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000302,0.017482517482517487,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000400,0.03263403263403264,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000500,0.017482517482517487,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000600,0.02797202797202798,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000700,0.040792540792540806,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000806,0.0023310023310023314,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000808,0.010489510489510492,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000809,0.005827505827505829,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000901,0.0,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001000902,0.006993006993006994,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001000,0.017482517482517487,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001100,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001201,0.003496503496503497,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001202,0.017482517482517487,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001203,0.006993006993006995,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001400,0.04545454545454545,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001514,0.003496503496503497,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001515,0.01398601398601399,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001516,0.004662004662004663,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001517,0.004662004662004663,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001519,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001522,0.040792540792540806,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001605,0.025641025641025647,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001701,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001702,0.005827505827505829,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001802,0.022144522144522148,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001803,0.022144522144522148,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001811,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001813,0.005827505827505829,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001815,0.01398601398601399,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001816,0.03379953379953381,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001817,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001818,0.040792540792540806,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001819,0.03146853146853148,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001902,0.02447552447552448,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001907,0.012820512820512824,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001001908,0.04778554778554777,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002001,0.003496503496503497,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002002,0.023310023310023315,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002101,0.010489510489510492,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002102,0.00815850815850816,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002201,0.02680652680652681,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002202,0.025641025641025647,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002204,0.023310023310023315,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002207,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002208,0.004662004662004663,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002209,0.04195804195804197,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002210,0.012820512820512824,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002217,0.023310023310023315,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002218,0.00815850815850816,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002219,0.015151515151515155,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002220,0.01398601398601399,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002221,0.0023310023310023314,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001002222,0.011655011655011658,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2035,learned,greedy,True,12001110800,0.0011655011655011657,0.0,configuration identity; levels reused from original verification,,,
+E1,High,1.0,2045,learned,greedy,False,12001000201,0.02797202797202798,-1.3467560400794927,new paired event simulation,4.153764378500285,5.500520418579778,313.0
+E1,High,1.0,2045,learned,greedy,False,12001000202,0.005827505827505829,-1.8538650238759051,new paired event simulation,3.403186845446083,5.257051869321988,78.0
+E1,High,1.0,2045,learned,greedy,False,12001000301,0.03263403263403264,-0.13937605833381905,new paired event simulation,4.57305420921964,4.712430267553459,402.0
+E1,High,1.0,2045,learned,greedy,False,12001000302,0.017482517482517487,-0.037234858653254044,new paired event simulation,4.436909135304288,4.474143993957542,210.0
+E1,High,1.0,2045,learned,greedy,False,12001000400,0.03263403263403264,0.2034745916957359,new paired event simulation,5.324308357583404,5.120833765887668,467.0
+E1,High,1.0,2045,learned,greedy,False,12001000500,0.017482517482517487,-0.6463762119313534,new paired event simulation,3.8517468420152214,4.498123053946575,238.0
+E1,High,1.0,2045,learned,greedy,False,12001000600,0.02797202797202798,0.369915025069246,new paired event simulation,4.695811955300901,4.325896930231655,343.0
+E1,High,1.0,2045,learned,greedy,False,12001000700,0.040792540792540806,-0.271861418762553,new paired event simulation,4.924748523572627,5.19660994233518,536.0
+E1,High,1.0,2045,learned,greedy,False,12001000806,0.0023310023310023314,-0.8232895649555654,new paired event simulation,3.561401850840904,4.384691415796469,30.0
+E1,High,1.0,2045,learned,greedy,False,12001000808,0.010489510489510492,0.6037410787747302,new paired event simulation,5.071666834758914,4.467925755984184,136.0
+E1,High,1.0,2045,learned,greedy,False,12001000809,0.005827505827505829,0.010694817175807447,new paired event simulation,3.830449556188906,3.8197547390130984,71.0
+E1,High,1.0,2045,learned,greedy,False,12001000901,0.0,,new paired event simulation,,,0.0
+E1,High,1.0,2045,learned,greedy,False,12001000902,0.006993006993006994,-0.4892161973256046,new paired event simulation,4.2508455665133384,4.740061763838943,118.0
+E1,High,1.0,2045,learned,greedy,False,12001001000,0.017482517482517487,-0.28902922180809654,new paired event simulation,4.5137548742953735,4.80278409610347,231.0
+E1,High,1.0,2045,learned,greedy,False,12001001100,0.011655011655011658,-0.0254433830783638,new paired event simulation,5.055589062983522,5.081032446061886,170.0
+E1,High,1.0,2045,learned,greedy,False,12001001201,0.003496503496503497,0.0001077087824139511,new paired event simulation,4.064094043092258,4.063986334309844,49.0
+E1,High,1.0,2045,learned,greedy,False,12001001202,0.017482517482517487,-0.0006983677428689106,new paired event simulation,4.845863322974909,4.8465616907177775,215.0
+E1,High,1.0,2045,learned,greedy,False,12001001203,0.006993006993006995,-0.025979202668779067,new paired event simulation,4.323632654421952,4.349611857090731,118.0
+E1,High,1.0,2045,learned,greedy,False,12001001400,0.04545454545454545,0.23454831848933821,new paired event simulation,6.278456572937672,6.043908254448334,603.0
+E1,High,1.0,2045,learned,greedy,False,12001001514,0.003496503496503497,-0.11523501223462018,new paired event simulation,3.1773762117249937,3.292611223959614,54.0
+E1,High,1.0,2045,learned,greedy,False,12001001515,0.01398601398601399,0.01059126182449166,new paired event simulation,4.911447722354406,4.900856460529915,183.0
+E1,High,1.0,2045,learned,greedy,False,12001001516,0.004662004662004663,0.15098965798622377,new paired event simulation,5.00907676734817,4.858087109361946,58.0
+E1,High,1.0,2045,learned,greedy,False,12001001517,0.004662004662004663,-0.27145069013385115,new paired event simulation,4.522868106710496,4.7943187968443475,71.0
+E1,High,1.0,2045,learned,greedy,False,12001001519,0.011655011655011658,-0.22073140122569512,new paired event simulation,4.797325973922005,5.0180573751477,132.0
+E1,High,1.0,2045,learned,greedy,False,12001001522,0.040792540792540806,-0.06089951268762217,new paired event simulation,4.057061342828013,4.117960855515635,556.0
+E1,High,1.0,2045,learned,greedy,False,12001001605,0.025641025641025647,-0.06315120363571847,new paired event simulation,4.38454850760791,4.4476997112436285,412.0
+E1,High,1.0,2045,learned,greedy,False,12001001701,0.011655011655011658,-0.4333159585918729,new paired event simulation,5.836871044578673,6.270187003170546,137.0
+E1,High,1.0,2045,learned,greedy,False,12001001702,0.005827505827505829,-0.5730758083686531,new paired event simulation,5.653619129233569,6.226694937602222,61.0
+E1,High,1.0,2045,learned,greedy,False,12001001802,0.022144522144522148,-0.029544212967111072,new paired event simulation,5.478149121405889,5.507693334373,269.0
+E1,High,1.0,2045,learned,greedy,False,12001001803,0.022144522144522148,0.00014283712747964472,new paired event simulation,5.258912892390659,5.258770055263179,310.0
+E1,High,1.0,2045,learned,greedy,False,12001001811,0.011655011655011658,-0.16030952757453143,new paired event simulation,8.725090954921713,8.885400482496244,148.0
+E1,High,1.0,2045,learned,greedy,False,12001001813,0.005827505827505829,0.0,new paired event simulation,6.8157249121744865,6.8157249121744865,67.0
+E1,High,1.0,2045,learned,greedy,False,12001001815,0.01398601398601399,0.0,new paired event simulation,13.435669132902639,13.435669132902639,144.0
+E1,High,1.0,2045,learned,greedy,False,12001001816,0.03379953379953381,0.0,new paired event simulation,7.031953377407778,7.031953377407778,435.0
+E1,High,1.0,2045,learned,greedy,False,12001001817,0.011655011655011658,0.0,new paired event simulation,6.480834221278523,6.480834221278523,156.0
+E1,High,1.0,2045,learned,greedy,False,12001001818,0.040792540792540806,0.0,new paired event simulation,8.69559940987835,8.69559940987835,521.0
+E1,High,1.0,2045,learned,greedy,False,12001001819,0.03146853146853148,0.0,new paired event simulation,9.057024301632055,9.057024301632055,394.0
+E1,High,1.0,2045,learned,greedy,False,12001001902,0.02447552447552448,0.16997797728337627,new paired event simulation,5.805680281687856,5.63570230440448,348.0
+E1,High,1.0,2045,learned,greedy,False,12001001907,0.012820512820512824,-0.20861885043846407,new paired event simulation,6.670599540664553,6.879218391103017,184.0
+E1,High,1.0,2045,learned,greedy,False,12001001908,0.04778554778554777,-0.3040749674231229,new paired event simulation,8.087550516668122,8.391625484091245,615.0
+E1,High,1.0,2045,learned,greedy,False,12001002001,0.003496503496503497,-0.01906948043562018,new paired event simulation,11.685419353002235,11.704488833437855,47.0
+E1,High,1.0,2045,learned,greedy,False,12001002002,0.023310023310023315,-0.04330484583325678,new paired event simulation,8.406276601128615,8.449581446961872,296.0
+E1,High,1.0,2045,learned,greedy,False,12001002101,0.010489510489510492,-0.6203788222550433,new paired event simulation,9.554130482168572,10.174509304423616,128.0
+E1,High,1.0,2045,learned,greedy,False,12001002102,0.00815850815850816,-0.3265317243685395,new paired event simulation,7.396116135459038,7.722647859827577,99.0
+E1,High,1.0,2045,learned,greedy,False,12001002201,0.02680652680652681,-0.009811143917431764,new paired event simulation,8.648292370037668,8.6581035139551,367.0
+E1,High,1.0,2045,learned,greedy,False,12001002202,0.025641025641025647,-0.030291805082622858,new paired event simulation,8.594200394715708,8.62449219979833,376.0
+E1,High,1.0,2045,learned,greedy,False,12001002204,0.023310023310023315,-1.5814725127980385,new paired event simulation,6.550991148562813,8.132463661360852,320.0
+E1,High,1.0,2045,learned,greedy,False,12001002207,0.011655011655011658,-1.5986544306434816,new paired event simulation,6.037483302861602,7.636137733505084,161.0
+E1,High,1.0,2045,learned,greedy,False,12001002208,0.004662004662004663,-0.37659718321819824,new paired event simulation,6.565310868015513,6.941908051233711,44.0
+E1,High,1.0,2045,learned,greedy,False,12001002209,0.04195804195804197,-0.25518734670260734,new paired event simulation,9.1964942025446,9.451681549247207,529.0
+E1,High,1.0,2045,learned,greedy,False,12001002210,0.012820512820512824,0.0,new paired event simulation,7.423384408760842,7.423384408760842,153.0
+E1,High,1.0,2045,learned,greedy,False,12001002217,0.023310023310023315,-0.6566963410479341,new paired event simulation,7.376507566379893,8.033203907427827,291.0
+E1,High,1.0,2045,learned,greedy,False,12001002218,0.00815850815850816,-0.012329856199125189,new paired event simulation,7.331604317059328,7.343934173258453,98.0
+E1,High,1.0,2045,learned,greedy,False,12001002219,0.015151515151515155,-0.39920390045659815,new paired event simulation,6.249459130948185,6.648663031404783,163.0
+E1,High,1.0,2045,learned,greedy,False,12001002220,0.01398601398601399,-1.1524566073496887,new paired event simulation,5.526620589170785,6.679077196520474,196.0
+E1,High,1.0,2045,learned,greedy,False,12001002221,0.0023310023310023314,0.06468212631336989,new paired event simulation,6.100911805568493,6.036229679255123,40.0
+E1,High,1.0,2045,learned,greedy,False,12001002222,0.011655011655011658,-0.1392996910095894,new paired event simulation,6.6813797291132,6.820679420122789,165.0
+E1,High,1.0,2045,learned,greedy,False,12001110800,0.0011655011655011657,-1.0162327892384404,new paired event simulation,3.1798239636034067,4.196056752841847,17.0
+E1,High,0.0,2035,learned,greedy,False,12001000201,0.02797202797202798,0.0,new paired event simulation,4.153909282024265,4.153909282024265,313.0
+E1,High,0.0,2035,learned,greedy,False,12001000202,0.005827505827505829,0.0,new paired event simulation,3.4053505821762613,3.4053505821762613,78.0
+E1,High,0.0,2035,learned,greedy,False,12001000301,0.03263403263403264,0.0,new paired event simulation,4.593407733343312,4.593407733343312,402.0
+E1,High,0.0,2035,learned,greedy,False,12001000302,0.017482517482517487,0.0,new paired event simulation,4.485511049067026,4.485511049067026,210.0
+E1,High,0.0,2035,learned,greedy,False,12001000400,0.03263403263403264,0.0,new paired event simulation,5.375924921519975,5.375924921519975,467.0
+E1,High,0.0,2035,learned,greedy,False,12001000500,0.017482517482517487,0.0,new paired event simulation,3.905527639571408,3.905527639571408,238.0
+E1,High,0.0,2035,learned,greedy,False,12001000600,0.02797202797202798,0.0,new paired event simulation,4.7639953500353975,4.7639953500353975,343.0
+E1,High,0.0,2035,learned,greedy,False,12001000700,0.040792540792540806,0.0,new paired event simulation,4.941713608664707,4.941713608664707,536.0
+E1,High,0.0,2035,learned,greedy,False,12001000806,0.0023310023310023314,0.0,new paired event simulation,3.541112864334136,3.541112864334136,30.0
+E1,High,0.0,2035,learned,greedy,False,12001000808,0.010489510489510492,0.0,new paired event simulation,5.119140470499708,5.119140470499708,136.0
+E1,High,0.0,2035,learned,greedy,False,12001000809,0.005827505827505829,0.0,new paired event simulation,3.8210301971980476,3.8210301971980476,71.0
+E1,High,0.0,2035,learned,greedy,False,12001000901,0.0,,new paired event simulation,,,0.0
+E1,High,0.0,2035,learned,greedy,False,12001000902,0.006993006993006994,0.0,new paired event simulation,4.2430622062577905,4.2430622062577905,118.0
+E1,High,0.0,2035,learned,greedy,False,12001001000,0.017482517482517487,0.0,new paired event simulation,4.4938075983568675,4.4938075983568675,231.0
+E1,High,0.0,2035,learned,greedy,False,12001001100,0.011655011655011658,0.0,new paired event simulation,5.085303533055441,5.085303533055441,170.0
+E1,High,0.0,2035,learned,greedy,False,12001001201,0.003496503496503497,0.0,new paired event simulation,4.075047900966134,4.075047900966134,49.0
+E1,High,0.0,2035,learned,greedy,False,12001001202,0.017482517482517487,0.0,new paired event simulation,4.873322543654163,4.873322543654163,215.0
+E1,High,0.0,2035,learned,greedy,False,12001001203,0.006993006993006995,0.0,new paired event simulation,4.345800178418199,4.345800178418199,118.0
+E1,High,0.0,2035,learned,greedy,False,12001001400,0.04545454545454545,0.0,new paired event simulation,6.365038597531322,6.365038597531322,603.0
+E1,High,0.0,2035,learned,greedy,False,12001001514,0.003496503496503497,0.0,new paired event simulation,3.22468097407125,3.22468097407125,54.0
+E1,High,0.0,2035,learned,greedy,False,12001001515,0.01398601398601399,0.0,new paired event simulation,4.928787894195152,4.928787894195152,183.0
+E1,High,0.0,2035,learned,greedy,False,12001001516,0.004662004662004663,0.0,new paired event simulation,5.561821496276848,5.561821496276848,58.0
+E1,High,0.0,2035,learned,greedy,False,12001001517,0.004662004662004663,0.0,new paired event simulation,4.788246595745941,4.788246595745941,71.0
+E1,High,0.0,2035,learned,greedy,False,12001001519,0.011655011655011658,0.0,new paired event simulation,5.01140061573396,5.01140061573396,132.0
+E1,High,0.0,2035,learned,greedy,False,12001001522,0.040792540792540806,0.0,new paired event simulation,4.132731657807047,4.132731657807047,556.0
+E1,High,0.0,2035,learned,greedy,False,12001001605,0.025641025641025647,0.0,new paired event simulation,4.374463038226937,4.374463038226937,412.0
+E1,High,0.0,2035,learned,greedy,False,12001001701,0.011655011655011658,0.0,new paired event simulation,7.833794436816269,7.833794436816269,137.0
+E1,High,0.0,2035,learned,greedy,False,12001001702,0.005827505827505829,0.0,new paired event simulation,5.725346264775667,5.725346264775667,61.0
+E1,High,0.0,2035,learned,greedy,False,12001001802,0.022144522144522148,0.0,new paired event simulation,5.502114170487497,5.502114170487497,269.0
+E1,High,0.0,2035,learned,greedy,False,12001001803,0.022144522144522148,0.0,new paired event simulation,5.291815568968749,5.291815568968749,310.0
+E1,High,0.0,2035,learned,greedy,False,12001001811,0.011655011655011658,0.0,new paired event simulation,10.410454343864833,10.410454343864833,148.0
+E1,High,0.0,2035,learned,greedy,False,12001001813,0.005827505827505829,0.0,new paired event simulation,7.368882724542555,7.368882724542555,67.0
+E1,High,0.0,2035,learned,greedy,False,12001001815,0.01398601398601399,0.0,new paired event simulation,13.626789718825066,13.626789718825066,144.0
+E1,High,0.0,2035,learned,greedy,False,12001001816,0.03379953379953381,0.0,new paired event simulation,7.260649175080562,7.260649175080562,435.0
+E1,High,0.0,2035,learned,greedy,False,12001001817,0.011655011655011658,0.0,new paired event simulation,6.544037505008607,6.544037505008607,156.0
+E1,High,0.0,2035,learned,greedy,False,12001001818,0.040792540792540806,0.0,new paired event simulation,9.222192297089908,9.222192297089908,521.0
+E1,High,0.0,2035,learned,greedy,False,12001001819,0.03146853146853148,0.0,new paired event simulation,9.097009874870713,9.097009874870713,394.0
+E1,High,0.0,2035,learned,greedy,False,12001001902,0.02447552447552448,0.0,new paired event simulation,5.792294863271979,5.792294863271979,348.0
+E1,High,0.0,2035,learned,greedy,False,12001001907,0.012820512820512824,0.0,new paired event simulation,6.927297173586004,6.927297173586004,184.0
+E1,High,0.0,2035,learned,greedy,False,12001001908,0.04778554778554777,0.0,new paired event simulation,8.408120730107871,8.408120730107871,615.0
+E1,High,0.0,2035,learned,greedy,False,12001002001,0.003496503496503497,0.0,new paired event simulation,11.704488833437855,11.704488833437855,47.0
+E1,High,0.0,2035,learned,greedy,False,12001002002,0.023310023310023315,0.0,new paired event simulation,8.547678946880607,8.547678946880607,296.0
+E1,High,0.0,2035,learned,greedy,False,12001002101,0.010489510489510492,0.0,new paired event simulation,10.450507223168279,10.450507223168279,128.0
+E1,High,0.0,2035,learned,greedy,False,12001002102,0.00815850815850816,0.0,new paired event simulation,7.727208680111165,7.727208680111165,99.0
+E1,High,0.0,2035,learned,greedy,False,12001002201,0.02680652680652681,0.0,new paired event simulation,8.63264364311511,8.63264364311511,367.0
+E1,High,0.0,2035,learned,greedy,False,12001002202,0.025641025641025647,-0.0033500841826175076,new paired event simulation,8.593375563764432,8.59672564794705,376.0
+E1,High,0.0,2035,learned,greedy,False,12001002204,0.023310023310023315,0.0,new paired event simulation,7.02470336146843,7.02470336146843,320.0
+E1,High,0.0,2035,learned,greedy,False,12001002207,0.011655011655011658,0.0,new paired event simulation,6.046636624005767,6.046636624005767,161.0
+E1,High,0.0,2035,learned,greedy,False,12001002208,0.004662004662004663,0.0,new paired event simulation,6.362817304207287,6.362817304207287,44.0
+E1,High,0.0,2035,learned,greedy,False,12001002209,0.04195804195804197,0.01952363964218229,new paired event simulation,9.438152898241977,9.418629258599795,529.0
+E1,High,0.0,2035,learned,greedy,False,12001002210,0.012820512820512824,0.0,new paired event simulation,7.439026978961866,7.439026978961866,153.0
+E1,High,0.0,2035,learned,greedy,False,12001002217,0.023310023310023315,0.0037441859381290854,new paired event simulation,7.41039404571525,7.406649859777121,291.0
+E1,High,0.0,2035,learned,greedy,False,12001002218,0.00815850815850816,0.0,new paired event simulation,7.365178116504113,7.365178116504113,98.0
+E1,High,0.0,2035,learned,greedy,False,12001002219,0.015151515151515155,0.0,new paired event simulation,6.468801940075431,6.468801940075431,163.0
+E1,High,0.0,2035,learned,greedy,False,12001002220,0.01398601398601399,0.0,new paired event simulation,6.677569128769896,6.677569128769896,196.0
+E1,High,0.0,2035,learned,greedy,False,12001002221,0.0023310023310023314,0.0,new paired event simulation,5.970120361162386,5.970120361162386,40.0
+E1,High,0.0,2035,learned,greedy,False,12001002222,0.011655011655011658,0.0,new paired event simulation,6.675378018989441,6.675378018989441,165.0
+E1,High,0.0,2035,learned,greedy,False,12001110800,0.0011655011655011657,0.0,new paired event simulation,4.6306604930583175,4.6306604930583175,17.0
+E1,High,0.0,2045,learned,greedy,False,12001000201,0.02797202797202798,-1.3521964153776018,new paired event simulation,4.153996970649733,5.506193386027335,313.0
+E1,High,0.0,2045,learned,greedy,False,12001000202,0.005827505827505829,-1.821691372640542,new paired event simulation,3.434481043060348,5.25617241570089,78.0
+E1,High,0.0,2045,learned,greedy,False,12001000301,0.03263403263403264,-0.1467564609854799,new paired event simulation,4.624105952258881,4.770862413244361,402.0
+E1,High,0.0,2045,learned,greedy,False,12001000302,0.017482517482517487,0.005042144755928568,new paired event simulation,4.554659534137204,4.549617389381275,210.0
+E1,High,0.0,2045,learned,greedy,False,12001000400,0.03263403263403264,0.20636046669610497,new paired event simulation,5.356611110395847,5.150250643699742,467.0
+E1,High,0.0,2045,learned,greedy,False,12001000500,0.017482517482517487,-0.6877573901252365,new paired event simulation,3.924070779788555,4.6118281699137915,238.0
+E1,High,0.0,2045,learned,greedy,False,12001000600,0.02797202797202798,0.36803685156402643,new paired event simulation,4.764454401835395,4.3964175502713685,343.0
+E1,High,0.0,2045,learned,greedy,False,12001000700,0.040792540792540806,-0.27842184015550675,new paired event simulation,4.990140690213583,5.26856253036909,536.0
+E1,High,0.0,2045,learned,greedy,False,12001000806,0.0023310023310023314,-0.7212009173083223,new paired event simulation,3.6071319402143773,4.3283328575227,30.0
+E1,High,0.0,2045,learned,greedy,False,12001000808,0.010489510489510492,0.5980067049995483,new paired event simulation,5.074561066256554,4.476554361257006,136.0
+E1,High,0.0,2045,learned,greedy,False,12001000809,0.005827505827505829,0.0011733204426382926,new paired event simulation,3.8210301971980476,3.8198568767554093,71.0
+E1,High,0.0,2045,learned,greedy,False,12001000901,0.0,,new paired event simulation,,,0.0
+E1,High,0.0,2045,learned,greedy,False,12001000902,0.006993006993006994,-0.4780212444366283,new paired event simulation,4.256887331860524,4.734908576297152,118.0
+E1,High,0.0,2045,learned,greedy,False,12001001000,0.017482517482517487,-0.2751778556644311,new paired event simulation,4.486476663720786,4.761654519385217,231.0
+E1,High,0.0,2045,learned,greedy,False,12001001100,0.011655011655011658,-0.01829820173646457,new paired event simulation,5.161735178175149,5.180033379911613,170.0
+E1,High,0.0,2045,learned,greedy,False,12001001201,0.003496503496503497,0.0,new paired event simulation,4.06808798414256,4.06808798414256,49.0
+E1,High,0.0,2045,learned,greedy,False,12001001202,0.017482517482517487,0.002531716557518493,new paired event simulation,4.891458915739104,4.888927199181586,215.0
+E1,High,0.0,2045,learned,greedy,False,12001001203,0.006993006993006995,0.019218824637921905,new paired event simulation,4.3634100575005474,4.3441912328626255,118.0
+E1,High,0.0,2045,learned,greedy,False,12001001400,0.04545454545454545,0.2555520215934681,new paired event simulation,6.329240105112642,6.0736880835191736,603.0
+E1,High,0.0,2045,learned,greedy,False,12001001514,0.003496503496503497,-0.036865715385288045,new paired event simulation,3.227965445982732,3.26483116136802,54.0
+E1,High,0.0,2045,learned,greedy,False,12001001515,0.01398601398601399,0.010634312643169608,new paired event simulation,4.901728089259494,4.891093776616325,183.0
+E1,High,0.0,2045,learned,greedy,False,12001001516,0.004662004662004663,0.18145774003685577,new paired event simulation,5.020668774272647,4.839211034235791,58.0
+E1,High,0.0,2045,learned,greedy,False,12001001517,0.004662004662004663,-0.2946119663520923,new paired event simulation,4.530431582292685,4.825043548644778,71.0
+E1,High,0.0,2045,learned,greedy,False,12001001519,0.011655011655011658,-0.23287636370225595,new paired event simulation,4.787882416215389,5.020758779917645,132.0
+E1,High,0.0,2045,learned,greedy,False,12001001522,0.040792540792540806,-0.06510881318160067,new paired event simulation,4.0503371330278295,4.11544594620943,556.0
+E1,High,0.0,2045,learned,greedy,False,12001001605,0.025641025641025647,-0.014855847679394074,new paired event simulation,4.38246209087548,4.397317938554874,412.0
+E1,High,0.0,2045,learned,greedy,False,12001001701,0.011655011655011658,-0.014476651478719127,new paired event simulation,5.8777684128494085,5.892245064328128,137.0
+E1,High,0.0,2045,learned,greedy,False,12001001702,0.005827505827505829,-0.03383053589861529,new paired event simulation,5.65604504388002,5.689875579778636,61.0
+E1,High,0.0,2045,learned,greedy,False,12001001802,0.022144522144522148,0.0,new paired event simulation,5.467705696436244,5.467705696436244,269.0
+E1,High,0.0,2045,learned,greedy,False,12001001803,0.022144522144522148,0.003612604117751772,new paired event simulation,5.285148993813237,5.281536389695486,310.0
+E1,High,0.0,2045,learned,greedy,False,12001001811,0.011655011655011658,-0.07703614051134977,new paired event simulation,8.744827570653932,8.821863711165282,148.0
+E1,High,0.0,2045,learned,greedy,False,12001001813,0.005827505827505829,0.01926344415469483,new paired event simulation,6.834836409376606,6.815572965221911,67.0
+E1,High,0.0,2045,learned,greedy,False,12001001815,0.01398601398601399,0.0,new paired event simulation,13.431492986303379,13.431492986303379,144.0
+E1,High,0.0,2045,learned,greedy,False,12001001816,0.03379953379953381,0.0,new paired event simulation,7.017493506546912,7.017493506546912,435.0
+E1,High,0.0,2045,learned,greedy,False,12001001817,0.011655011655011658,0.0,new paired event simulation,6.491654120674993,6.491654120674993,156.0
+E1,High,0.0,2045,learned,greedy,False,12001001818,0.040792540792540806,0.0,new paired event simulation,8.701622894648668,8.701622894648668,521.0
+E1,High,0.0,2045,learned,greedy,False,12001001819,0.03146853146853148,0.0,new paired event simulation,9.080500900845637,9.080500900845637,394.0
+E1,High,0.0,2045,learned,greedy,False,12001001902,0.02447552447552448,0.14884933852843485,new paired event simulation,5.82297764276027,5.674128304231835,348.0
+E1,High,0.0,2045,learned,greedy,False,12001001907,0.012820512820512824,-0.19520104515815007,new paired event simulation,6.717707417825049,6.912908462983199,184.0
+E1,High,0.0,2045,learned,greedy,False,12001001908,0.04778554778554777,-0.31841288498914366,new paired event simulation,8.082023028848793,8.400435913837937,615.0
+E1,High,0.0,2045,learned,greedy,False,12001002001,0.003496503496503497,-0.01906948043562018,new paired event simulation,11.685419353002235,11.704488833437855,47.0
+E1,High,0.0,2045,learned,greedy,False,12001002002,0.023310023310023315,-0.04445891659408119,new paired event simulation,8.479456913481805,8.523915830075886,296.0
+E1,High,0.0,2045,learned,greedy,False,12001002101,0.010489510489510492,-0.6550328225473994,new paired event simulation,9.641784838566856,10.296817661114256,128.0
+E1,High,0.0,2045,learned,greedy,False,12001002102,0.00815850815850816,-0.3265317243685395,new paired event simulation,7.396116135459038,7.722647859827577,99.0
+E1,High,0.0,2045,learned,greedy,False,12001002201,0.02680652680652681,0.0,new paired event simulation,8.671592478164257,8.671592478164257,367.0
+E1,High,0.0,2045,learned,greedy,False,12001002202,0.025641025641025647,-0.004620287962859848,new paired event simulation,8.585623075539534,8.590243363502394,376.0
+E1,High,0.0,2045,learned,greedy,False,12001002204,0.023310023310023315,0.006426844396918874,new paired event simulation,6.51403438314855,6.507607538751631,320.0
+E1,High,0.0,2045,learned,greedy,False,12001002207,0.011655011655011658,0.001715350767893753,new paired event simulation,6.108582122311165,6.106866771543271,161.0
+E1,High,0.0,2045,learned,greedy,False,12001002208,0.004662004662004663,0.0,new paired event simulation,6.426314420967935,6.426314420967935,44.0
+E1,High,0.0,2045,learned,greedy,False,12001002209,0.04195804195804197,-0.2369980800837599,new paired event simulation,9.168875831611782,9.405873911695542,529.0
+E1,High,0.0,2045,learned,greedy,False,12001002210,0.012820512820512824,0.0,new paired event simulation,7.527752188229893,7.527752188229893,153.0
+E1,High,0.0,2045,learned,greedy,False,12001002217,0.023310023310023315,-0.05570541006470542,new paired event simulation,7.382419326491242,7.438124736555947,291.0
+E1,High,0.0,2045,learned,greedy,False,12001002218,0.00815850815850816,0.0,new paired event simulation,7.3260119707426155,7.3260119707426155,98.0
+E1,High,0.0,2045,learned,greedy,False,12001002219,0.015151515151515155,-0.23599899826801707,new paired event simulation,6.206308136174786,6.442307134442803,163.0
+E1,High,0.0,2045,learned,greedy,False,12001002220,0.01398601398601399,-1.11799659409317,new paired event simulation,5.548585881284506,6.666582475377676,196.0
+E1,High,0.0,2045,learned,greedy,False,12001002221,0.0023310023310023314,0.028010521752682926,new paired event simulation,5.998130882915069,5.970120361162386,40.0
+E1,High,0.0,2045,learned,greedy,False,12001002222,0.011655011655011658,-0.06657968441854667,new paired event simulation,6.691643191873332,6.758222876291879,165.0
+E1,High,0.0,2045,learned,greedy,False,12001110800,0.0011655011655011657,-0.8964330610636555,new paired event simulation,3.2996236917781916,4.196056752841847,17.0
+E2,Medium,0.0,2040,A,B,False,12001000201,0.02797202797202798,0.0,new paired event simulation,5.5911974314114365,5.5911974314114365,313.0
+E2,Medium,0.0,2040,A,B,False,12001000202,0.005827505827505829,0.0,new paired event simulation,5.341275570372267,5.341275570372267,78.0
+E2,Medium,0.0,2040,A,B,False,12001000301,0.03263403263403264,0.0,new paired event simulation,4.900472384458446,4.900472384458446,402.0
+E2,Medium,0.0,2040,A,B,False,12001000302,0.017482517482517487,0.0,new paired event simulation,4.533928939921667,4.533928939921667,210.0
+E2,Medium,0.0,2040,A,B,False,12001000400,0.03263403263403264,0.0,new paired event simulation,5.48779761527784,5.48779761527784,467.0
+E2,Medium,0.0,2040,A,B,False,12001000500,0.017482517482517487,0.0,new paired event simulation,5.061512813504063,5.061512813504063,238.0
+E2,Medium,0.0,2040,A,B,False,12001000600,0.02797202797202798,-0.050364272298419444,new paired event simulation,5.138950050426947,5.189314322725367,343.0
+E2,Medium,0.0,2040,A,B,False,12001000700,0.040792540792540806,-0.012718200805944768,new paired event simulation,5.563573441790591,5.576291642596535,536.0
+E2,Medium,0.0,2040,A,B,False,12001000806,0.0023310023310023314,0.0,new paired event simulation,4.360374095566157,4.360374095566157,30.0
+E2,Medium,0.0,2040,A,B,False,12001000808,0.010489510489510492,0.0,new paired event simulation,4.47009460187967,4.47009460187967,136.0
+E2,Medium,0.0,2040,A,B,False,12001000809,0.005827505827505829,0.0,new paired event simulation,3.8197547390130984,3.8197547390130984,71.0
+E2,Medium,0.0,2040,A,B,False,12001000901,0.0,,new paired event simulation,,,0.0
+E2,Medium,0.0,2040,A,B,False,12001000902,0.006993006993006994,0.0,new paired event simulation,4.737098631672634,4.737098631672634,118.0
+E2,Medium,0.0,2040,A,B,False,12001001000,0.017482517482517487,0.0,new paired event simulation,4.757097082053117,4.757097082053117,231.0
+E2,Medium,0.0,2040,A,B,False,12001001100,0.011655011655011658,0.0,new paired event simulation,5.063442298278291,5.063442298278291,170.0
+E2,Medium,0.0,2040,A,B,False,12001001201,0.003496503496503497,0.0,new paired event simulation,4.168115234696845,4.168115234696845,49.0
+E2,Medium,0.0,2040,A,B,False,12001001202,0.017482517482517487,0.0,new paired event simulation,4.846567402970575,4.846567402970575,215.0
+E2,Medium,0.0,2040,A,B,False,12001001203,0.006993006993006995,0.0,new paired event simulation,4.359801672724826,4.359801672724826,118.0
+E2,Medium,0.0,2040,A,B,False,12001001400,0.04545454545454545,0.0,new paired event simulation,6.428271132615692,6.428271132615692,603.0
+E2,Medium,0.0,2040,A,B,False,12001001514,0.003496503496503497,0.0,new paired event simulation,3.2297343765115962,3.2297343765115962,54.0
+E2,Medium,0.0,2040,A,B,False,12001001515,0.01398601398601399,0.0,new paired event simulation,4.889105922647137,4.889105922647137,183.0
+E2,Medium,0.0,2040,A,B,False,12001001516,0.004662004662004663,0.0,new paired event simulation,4.839211034235791,4.839211034235791,58.0
+E2,Medium,0.0,2040,A,B,False,12001001517,0.004662004662004663,0.0,new paired event simulation,4.786742993573286,4.786742993573286,71.0
+E2,Medium,0.0,2040,A,B,False,12001001519,0.011655011655011658,0.0,new paired event simulation,4.975507819752214,4.975507819752214,132.0
+E2,Medium,0.0,2040,A,B,False,12001001522,0.040792540792540806,0.0,new paired event simulation,4.084744839194895,4.084744839194895,556.0
+E2,Medium,0.0,2040,A,B,False,12001001605,0.025641025641025647,0.0,new paired event simulation,4.37835019454617,4.37835019454617,412.0
+E2,Medium,0.0,2040,A,B,False,12001001701,0.011655011655011658,0.0,new paired event simulation,7.842729412069195,7.842729412069195,137.0
+E2,Medium,0.0,2040,A,B,False,12001001702,0.005827505827505829,0.0,new paired event simulation,5.721050957392074,5.721050957392074,61.0
+E2,Medium,0.0,2040,A,B,False,12001001802,0.022144522144522148,0.0,new paired event simulation,5.466242033712674,5.466242033712674,269.0
+E2,Medium,0.0,2040,A,B,False,12001001803,0.022144522144522148,0.0,new paired event simulation,5.259357992833911,5.259357992833911,310.0
+E2,Medium,0.0,2040,A,B,False,12001001811,0.011655011655011658,0.0,new paired event simulation,10.405034932955244,10.405034932955244,148.0
+E2,Medium,0.0,2040,A,B,False,12001001813,0.005827505827505829,0.0,new paired event simulation,7.368882724542555,7.368882724542555,67.0
+E2,Medium,0.0,2040,A,B,False,12001001815,0.01398601398601399,0.19156034573335035,new paired event simulation,13.626863074515134,13.435302728781783,144.0
+E2,Medium,0.0,2040,A,B,False,12001001816,0.03379953379953381,0.22891619361519666,new paired event simulation,7.220340183960666,6.991423990345469,435.0
+E2,Medium,0.0,2040,A,B,False,12001001817,0.011655011655011658,0.03143487132421097,new paired event simulation,6.538017947425664,6.506583076101453,156.0
+E2,Medium,0.0,2040,A,B,False,12001001818,0.040792540792540806,0.5223649935667307,new paired event simulation,9.215006937479302,8.692641943912571,521.0
+E2,Medium,0.0,2040,A,B,False,12001001819,0.03146853146853148,0.04754939806872471,new paired event simulation,9.091881624598686,9.044332226529962,394.0
+E2,Medium,0.0,2040,A,B,False,12001001902,0.02447552447552448,0.0,new paired event simulation,5.974334505772892,5.974334505772892,348.0
+E2,Medium,0.0,2040,A,B,False,12001001907,0.012820512820512824,0.0,new paired event simulation,6.882430729134718,6.882430729134718,184.0
+E2,Medium,0.0,2040,A,B,False,12001001908,0.04778554778554777,0.0,new paired event simulation,8.374132623105597,8.374132623105597,615.0
+E2,Medium,0.0,2040,A,B,False,12001002001,0.003496503496503497,-0.5097466931394354,new paired event simulation,11.19474214029842,11.704488833437855,47.0
+E2,Medium,0.0,2040,A,B,False,12001002002,0.023310023310023315,-0.5239111715239169,new paired event simulation,7.916018896539184,8.4399300680631,296.0
+E2,Medium,0.0,2040,A,B,False,12001002101,0.010489510489510492,0.0,new paired event simulation,10.175838322945797,10.175838322945797,128.0
+E2,Medium,0.0,2040,A,B,False,12001002102,0.00815850815850816,0.0,new paired event simulation,7.722647859827577,7.722647859827577,99.0
+E2,Medium,0.0,2040,A,B,False,12001002201,0.02680652680652681,0.0,new paired event simulation,8.636244037149083,8.636244037149083,367.0
+E2,Medium,0.0,2040,A,B,False,12001002202,0.025641025641025647,0.0,new paired event simulation,8.578906851448275,8.578906851448275,376.0
+E2,Medium,0.0,2040,A,B,False,12001002204,0.023310023310023315,0.0,new paired event simulation,6.972834940639986,6.972834940639986,320.0
+E2,Medium,0.0,2040,A,B,False,12001002207,0.011655011655011658,0.0,new paired event simulation,5.996378011787291,5.996378011787291,161.0
+E2,Medium,0.0,2040,A,B,False,12001002208,0.004662004662004663,0.0,new paired event simulation,6.362817304207287,6.362817304207287,44.0
+E2,Medium,0.0,2040,A,B,False,12001002209,0.04195804195804197,0.0,new paired event simulation,9.388307655006356,9.388307655006356,529.0
+E2,Medium,0.0,2040,A,B,False,12001002210,0.012820512820512824,0.0,new paired event simulation,7.441517591910565,7.441517591910565,153.0
+E2,Medium,0.0,2040,A,B,False,12001002217,0.023310023310023315,0.0,new paired event simulation,7.411184157831738,7.411184157831738,291.0
+E2,Medium,0.0,2040,A,B,False,12001002218,0.00815850815850816,0.0,new paired event simulation,7.298456316217346,7.298456316217346,98.0
+E2,Medium,0.0,2040,A,B,False,12001002219,0.015151515151515155,0.0,new paired event simulation,6.49404271309894,6.49404271309894,163.0
+E2,Medium,0.0,2040,A,B,False,12001002220,0.01398601398601399,0.0,new paired event simulation,6.639107141271115,6.639107141271115,196.0
+E2,Medium,0.0,2040,A,B,False,12001002221,0.0023310023310023314,0.0,new paired event simulation,6.052044159493989,6.052044159493989,40.0
+E2,Medium,0.0,2040,A,B,False,12001002222,0.011655011655011658,0.0,new paired event simulation,6.77817739129973,6.77817739129973,165.0
+E2,Medium,0.0,2040,A,B,False,12001110800,0.0011655011655011657,0.0,new paired event simulation,4.196056752841847,4.196056752841847,17.0
+E2,Medium,0.0,2045,A,B,False,12001000201,0.02797202797202798,0.0,new paired event simulation,5.585237576020286,5.585237576020286,313.0
+E2,Medium,0.0,2045,A,B,False,12001000202,0.005827505827505829,0.0,new paired event simulation,5.349415552820278,5.349415552820278,78.0
+E2,Medium,0.0,2045,A,B,False,12001000301,0.03263403263403264,0.0,new paired event simulation,4.91611470738364,4.91611470738364,402.0
+E2,Medium,0.0,2045,A,B,False,12001000302,0.017482517482517487,0.0,new paired event simulation,4.508397333798284,4.508397333798284,210.0
+E2,Medium,0.0,2045,A,B,False,12001000400,0.03263403263403264,0.0,new paired event simulation,5.552857245524938,5.552857245524938,467.0
+E2,Medium,0.0,2045,A,B,False,12001000500,0.017482517482517487,-0.009018457424272874,new paired event simulation,5.087228267206597,5.09624672463087,238.0
+E2,Medium,0.0,2045,A,B,False,12001000600,0.02797202797202798,-0.04809424252096761,new paired event simulation,5.140654435525774,5.188748678046742,343.0
+E2,Medium,0.0,2045,A,B,False,12001000700,0.040792540792540806,-0.01271820080594388,new paired event simulation,5.576901998732853,5.589620199538797,536.0
+E2,Medium,0.0,2045,A,B,False,12001000806,0.0023310023310023314,0.0,new paired event simulation,4.378844178086146,4.378844178086146,30.0
+E2,Medium,0.0,2045,A,B,False,12001000808,0.010489510489510492,0.0,new paired event simulation,4.483418229206161,4.483418229206161,136.0
+E2,Medium,0.0,2045,A,B,False,12001000809,0.005827505827505829,0.0,new paired event simulation,3.8634414561098147,3.8634414561098147,71.0
+E2,Medium,0.0,2045,A,B,False,12001000901,0.0,,new paired event simulation,,,0.0
+E2,Medium,0.0,2045,A,B,False,12001000902,0.006993006993006994,0.0,new paired event simulation,4.736693933185179,4.736693933185179,118.0
+E2,Medium,0.0,2045,A,B,False,12001001000,0.017482517482517487,0.0,new paired event simulation,4.798143591913485,4.798143591913485,231.0
+E2,Medium,0.0,2045,A,B,False,12001001100,0.011655011655011658,0.005310869925089889,new paired event simulation,5.152963196568708,5.147652326643618,170.0
+E2,Medium,0.0,2045,A,B,False,12001001201,0.003496503496503497,0.0,new paired event simulation,4.080724945502533,4.080724945502533,49.0
+E2,Medium,0.0,2045,A,B,False,12001001202,0.017482517482517487,0.0,new paired event simulation,4.849557751892982,4.849557751892982,215.0
+E2,Medium,0.0,2045,A,B,False,12001001203,0.006993006993006995,0.0,new paired event simulation,4.362303361864803,4.362303361864803,118.0
+E2,Medium,0.0,2045,A,B,False,12001001400,0.04545454545454545,0.0,new paired event simulation,6.438453337137104,6.438453337137104,603.0
+E2,Medium,0.0,2045,A,B,False,12001001514,0.003496503496503497,0.0,new paired event simulation,3.223647312433703,3.223647312433703,54.0
+E2,Medium,0.0,2045,A,B,False,12001001515,0.01398601398601399,0.0,new paired event simulation,4.9054049687066925,4.9054049687066925,183.0
+E2,Medium,0.0,2045,A,B,False,12001001516,0.004662004662004663,0.0,new paired event simulation,4.839211034235791,4.839211034235791,58.0
+E2,Medium,0.0,2045,A,B,False,12001001517,0.004662004662004663,0.0,new paired event simulation,4.809839124821152,4.809839124821152,71.0
+E2,Medium,0.0,2045,A,B,False,12001001519,0.011655011655011658,0.0,new paired event simulation,4.940322002280121,4.940322002280121,132.0
+E2,Medium,0.0,2045,A,B,False,12001001522,0.040792540792540806,0.0,new paired event simulation,4.08181237467936,4.08181237467936,556.0
+E2,Medium,0.0,2045,A,B,False,12001001605,0.025641025641025647,0.0,new paired event simulation,4.374204060915577,4.374204060915577,412.0
+E2,Medium,0.0,2045,A,B,False,12001001701,0.011655011655011658,0.0,new paired event simulation,5.8356411308501,5.8356411308501,137.0
+E2,Medium,0.0,2045,A,B,False,12001001702,0.005827505827505829,0.0,new paired event simulation,5.6716276103744745,5.6716276103744745,61.0
+E2,Medium,0.0,2045,A,B,False,12001001802,0.022144522144522148,0.0,new paired event simulation,5.463686474253329,5.463686474253329,269.0
+E2,Medium,0.0,2045,A,B,False,12001001803,0.022144522144522148,0.0,new paired event simulation,5.296834397136875,5.296834397136875,310.0
+E2,Medium,0.0,2045,A,B,False,12001001811,0.011655011655011658,0.0,new paired event simulation,8.799148946387904,8.799148946387904,148.0
+E2,Medium,0.0,2045,A,B,False,12001001813,0.005827505827505829,0.0,new paired event simulation,6.782228712890811,6.782228712890811,67.0
+E2,Medium,0.0,2045,A,B,False,12001001815,0.01398601398601399,0.013854825744809673,new paired event simulation,13.435229373091715,13.421374547346906,144.0
+E2,Medium,0.0,2045,A,B,False,12001001816,0.03379953379953381,0.02963409320229271,new paired event simulation,6.9874014672537275,6.957767374051435,435.0
+E2,Medium,0.0,2045,A,B,False,12001001817,0.011655011655011658,0.0,new paired event simulation,6.480834221278523,6.480834221278523,156.0
+E2,Medium,0.0,2045,A,B,False,12001001818,0.040792540792540806,0.09971943248464754,new paired event simulation,8.693710001334873,8.593990568850225,521.0
+E2,Medium,0.0,2045,A,B,False,12001001819,0.03146853146853148,0.003216694333975312,new paired event simulation,9.053157425193925,9.04994073085995,394.0
+E2,Medium,0.0,2045,A,B,False,12001001902,0.02447552447552448,0.0,new paired event simulation,5.95984730580838,5.95984730580838,348.0
+E2,Medium,0.0,2045,A,B,False,12001001907,0.012820512820512824,0.0,new paired event simulation,6.888247601881983,6.888247601881983,184.0
+E2,Medium,0.0,2045,A,B,False,12001001908,0.04778554778554777,0.0,new paired event simulation,8.417363214996902,8.417363214996902,615.0
+E2,Medium,0.0,2045,A,B,False,12001002001,0.003496503496503497,-0.524874270435566,new paired event simulation,11.280538645238412,11.805412915673978,47.0
+E2,Medium,0.0,2045,A,B,False,12001002002,0.023310023310023315,-0.5630744074187062,new paired event simulation,7.916795172514534,8.47986957993324,296.0
+E2,Medium,0.0,2045,A,B,False,12001002101,0.010489510489510492,0.0,new paired event simulation,10.175838322945797,10.175838322945797,128.0
+E2,Medium,0.0,2045,A,B,False,12001002102,0.00815850815850816,0.0,new paired event simulation,7.722647859827577,7.722647859827577,99.0
+E2,Medium,0.0,2045,A,B,False,12001002201,0.02680652680652681,0.0,new paired event simulation,8.614921571991383,8.614921571991383,367.0
+E2,Medium,0.0,2045,A,B,False,12001002202,0.025641025641025647,0.0,new paired event simulation,8.57979349500494,8.57979349500494,376.0
+E2,Medium,0.0,2045,A,B,False,12001002204,0.023310023310023315,0.0,new paired event simulation,6.509034822814587,6.509034822814587,320.0
+E2,Medium,0.0,2045,A,B,False,12001002207,0.011655011655011658,0.0,new paired event simulation,5.990231100249724,5.990231100249724,161.0
+E2,Medium,0.0,2045,A,B,False,12001002208,0.004662004662004663,0.0,new paired event simulation,6.353496064620876,6.353496064620876,44.0
+E2,Medium,0.0,2045,A,B,False,12001002209,0.04195804195804197,0.0,new paired event simulation,9.388050563287393,9.388050563287393,529.0
+E2,Medium,0.0,2045,A,B,False,12001002210,0.012820512820512824,0.0,new paired event simulation,7.498824764627568,7.498824764627568,153.0
+E2,Medium,0.0,2045,A,B,False,12001002217,0.023310023310023315,0.0,new paired event simulation,7.413355251610458,7.413355251610458,291.0
+E2,Medium,0.0,2045,A,B,False,12001002218,0.00815850815850816,0.0,new paired event simulation,7.3066664133769335,7.3066664133769335,98.0
+E2,Medium,0.0,2045,A,B,False,12001002219,0.015151515151515155,0.0,new paired event simulation,6.4291102088749135,6.4291102088749135,163.0
+E2,Medium,0.0,2045,A,B,False,12001002220,0.01398601398601399,0.0,new paired event simulation,6.640266282551845,6.640266282551845,196.0
+E2,Medium,0.0,2045,A,B,False,12001002221,0.0023310023310023314,0.0,new paired event simulation,5.970120361162386,5.970120361162386,40.0
+E2,Medium,0.0,2045,A,B,False,12001002222,0.011655011655011658,0.0,new paired event simulation,6.671416642339887,6.671416642339887,165.0
+E2,Medium,0.0,2045,A,B,False,12001110800,0.0011655011655011657,0.0,new paired event simulation,4.239532519161117,4.239532519161117,17.0
+E2,Medium,1.0,2040,A,B,False,12001000201,0.02797202797202798,0.0,new paired event simulation,5.57916728458263,5.57916728458263,313.0
+E2,Medium,1.0,2040,A,B,False,12001000202,0.005827505827505829,0.0,new paired event simulation,5.341680345836522,5.341680345836522,78.0
+E2,Medium,1.0,2040,A,B,False,12001000301,0.03263403263403264,0.0,new paired event simulation,4.872866250345349,4.872866250345349,402.0
+E2,Medium,1.0,2040,A,B,False,12001000302,0.017482517482517487,0.0,new paired event simulation,4.456245359914352,4.456245359914352,210.0
+E2,Medium,1.0,2040,A,B,False,12001000400,0.03263403263403264,0.0,new paired event simulation,5.497515532337178,5.497515532337178,467.0
+E2,Medium,1.0,2040,A,B,False,12001000500,0.017482517482517487,-0.009018457424271986,new paired event simulation,5.032033191777117,5.041051649201389,238.0
+E2,Medium,1.0,2040,A,B,False,12001000600,0.02797202797202798,-0.04809424252096761,new paired event simulation,5.091498637918112,5.139592880439079,343.0
+E2,Medium,1.0,2040,A,B,False,12001000700,0.040792540792540806,-0.012718200805945656,new paired event simulation,5.528908997678791,5.541627198484736,536.0
+E2,Medium,1.0,2040,A,B,False,12001000806,0.0023310023310023314,0.0,new paired event simulation,4.353414699841911,4.353414699841911,30.0
+E2,Medium,1.0,2040,A,B,False,12001000808,0.010489510489510492,0.0,new paired event simulation,4.472545658625212,4.472545658625212,136.0
+E2,Medium,1.0,2040,A,B,False,12001000809,0.005827505827505829,0.0,new paired event simulation,3.852158030723864,3.852158030723864,71.0
+E2,Medium,1.0,2040,A,B,False,12001000901,0.0,,new paired event simulation,,,0.0
+E2,Medium,1.0,2040,A,B,False,12001000902,0.006993006993006994,0.0,new paired event simulation,4.733861138593862,4.733861138593862,118.0
+E2,Medium,1.0,2040,A,B,False,12001001000,0.017482517482517487,0.0,new paired event simulation,4.762298046274375,4.762298046274375,231.0
+E2,Medium,1.0,2040,A,B,False,12001001100,0.011655011655011658,0.0,new paired event simulation,5.087277422020619,5.087277422020619,170.0
+E2,Medium,1.0,2040,A,B,False,12001001201,0.003496503496503497,0.0,new paired event simulation,4.075047900966134,4.075047900966134,49.0
+E2,Medium,1.0,2040,A,B,False,12001001202,0.017482517482517487,0.0,new paired event simulation,4.846560438679267,4.846560438679267,215.0
+E2,Medium,1.0,2040,A,B,False,12001001203,0.006993006993006995,0.0,new paired event simulation,4.394924769056569,4.394924769056569,118.0
+E2,Medium,1.0,2040,A,B,False,12001001400,0.04545454545454545,0.0,new paired event simulation,6.376490538791054,6.376490538791054,603.0
+E2,Medium,1.0,2040,A,B,False,12001001514,0.003496503496503497,0.0,new paired event simulation,3.258703686592505,3.258703686592505,54.0
+E2,Medium,1.0,2040,A,B,False,12001001515,0.01398601398601399,0.0,new paired event simulation,4.89005558014553,4.89005558014553,183.0
+E2,Medium,1.0,2040,A,B,False,12001001516,0.004662004662004663,0.0,new paired event simulation,4.839211034235791,4.839211034235791,58.0
+E2,Medium,1.0,2040,A,B,False,12001001517,0.004662004662004663,0.0,new paired event simulation,4.801251231524707,4.801251231524707,71.0
+E2,Medium,1.0,2040,A,B,False,12001001519,0.011655011655011658,0.0,new paired event simulation,4.9709251067359475,4.9709251067359475,132.0
+E2,Medium,1.0,2040,A,B,False,12001001522,0.040792540792540806,0.0,new paired event simulation,4.120219108853974,4.120219108853974,556.0
+E2,Medium,1.0,2040,A,B,False,12001001605,0.025641025641025647,0.0,new paired event simulation,4.398940167362471,4.398940167362471,412.0
+E2,Medium,1.0,2040,A,B,False,12001001701,0.011655011655011658,0.0,new paired event simulation,7.826109947751997,7.826109947751997,137.0
+E2,Medium,1.0,2040,A,B,False,12001001702,0.005827505827505829,0.0,new paired event simulation,5.7302720197033254,5.7302720197033254,61.0
+E2,Medium,1.0,2040,A,B,False,12001001802,0.022144522144522148,0.0,new paired event simulation,5.4624400164674904,5.4624400164674904,269.0
+E2,Medium,1.0,2040,A,B,False,12001001803,0.022144522144522148,0.0,new paired event simulation,5.268004955200289,5.268004955200289,310.0
+E2,Medium,1.0,2040,A,B,False,12001001811,0.011655011655011658,0.0,new paired event simulation,10.410454343864833,10.410454343864833,148.0
+E2,Medium,1.0,2040,A,B,False,12001001813,0.005827505827505829,0.0,new paired event simulation,7.368882724542555,7.368882724542555,67.0
+E2,Medium,1.0,2040,A,B,False,12001001815,0.01398601398601399,0.19156034573335035,new paired event simulation,13.626863074515134,13.435302728781783,144.0
+E2,Medium,1.0,2040,A,B,False,12001001816,0.03379953379953381,0.23465501184486115,new paired event simulation,7.222056479098589,6.9874014672537275,435.0
+E2,Medium,1.0,2040,A,B,False,12001001817,0.011655011655011658,0.03143487132421008,new paired event simulation,6.527372413092396,6.4959375417681855,156.0
+E2,Medium,1.0,2040,A,B,False,12001001818,0.040792540792540806,0.5252446170961136,new paired event simulation,9.203838466469655,8.678593849373542,521.0
+E2,Medium,1.0,2040,A,B,False,12001001819,0.03146853146853148,0.04754939806872294,new paired event simulation,9.090706758784668,9.043157360715945,394.0
+E2,Medium,1.0,2040,A,B,False,12001001902,0.02447552447552448,0.0,new paired event simulation,5.923758077155182,5.923758077155182,348.0
+E2,Medium,1.0,2040,A,B,False,12001001907,0.012820512820512824,0.0,new paired event simulation,6.882430729134718,6.882430729134718,184.0
+E2,Medium,1.0,2040,A,B,False,12001001908,0.04778554778554777,0.0,new paired event simulation,8.387477539575082,8.387477539575082,615.0
+E2,Medium,1.0,2040,A,B,False,12001002001,0.003496503496503497,-0.5097466931394354,new paired event simulation,11.19474214029842,11.704488833437855,47.0
+E2,Medium,1.0,2040,A,B,False,12001002002,0.023310023310023315,-0.5327862744473384,new paired event simulation,7.916795172514534,8.449581446961872,296.0
+E2,Medium,1.0,2040,A,B,False,12001002101,0.010489510489510492,0.0,new paired event simulation,10.266869687137419,10.266869687137419,128.0
+E2,Medium,1.0,2040,A,B,False,12001002102,0.00815850815850816,0.0,new paired event simulation,7.722647859827577,7.722647859827577,99.0
+E2,Medium,1.0,2040,A,B,False,12001002201,0.02680652680652681,0.0,new paired event simulation,8.653042431037067,8.653042431037067,367.0
+E2,Medium,1.0,2040,A,B,False,12001002202,0.025641025641025647,0.0,new paired event simulation,8.589612104104004,8.589612104104004,376.0
+E2,Medium,1.0,2040,A,B,False,12001002204,0.023310023310023315,0.0,new paired event simulation,7.037475011066816,7.037475011066816,320.0
+E2,Medium,1.0,2040,A,B,False,12001002207,0.011655011655011658,0.0,new paired event simulation,6.0232545710345216,6.0232545710345216,161.0
+E2,Medium,1.0,2040,A,B,False,12001002208,0.004662004662004663,0.0,new paired event simulation,6.362817304207287,6.362817304207287,44.0
+E2,Medium,1.0,2040,A,B,False,12001002209,0.04195804195804197,0.0,new paired event simulation,9.383907338906806,9.383907338906806,529.0
+E2,Medium,1.0,2040,A,B,False,12001002210,0.012820512820512824,0.0,new paired event simulation,7.504332062141165,7.504332062141165,153.0
+E2,Medium,1.0,2040,A,B,False,12001002217,0.023310023310023315,0.0,new paired event simulation,7.417400308663439,7.417400308663439,291.0
+E2,Medium,1.0,2040,A,B,False,12001002218,0.00815850815850816,0.0,new paired event simulation,7.304333887334463,7.304333887334463,98.0
+E2,Medium,1.0,2040,A,B,False,12001002219,0.015151515151515155,0.0,new paired event simulation,6.547330568077773,6.547330568077773,163.0
+E2,Medium,1.0,2040,A,B,False,12001002220,0.01398601398601399,0.0,new paired event simulation,6.656254906243239,6.656254906243239,196.0
+E2,Medium,1.0,2040,A,B,False,12001002221,0.0023310023310023314,0.0,new paired event simulation,6.0182327195748595,6.0182327195748595,40.0
+E2,Medium,1.0,2040,A,B,False,12001002222,0.011655011655011658,0.0,new paired event simulation,6.765559215812338,6.765559215812338,165.0
+E2,Medium,1.0,2040,A,B,False,12001110800,0.0011655011655011657,0.0,new paired event simulation,4.196056752841847,4.196056752841847,17.0
+E2,Medium,1.0,2045,A,B,False,12001000201,0.02797202797202798,0.0,new paired event simulation,5.5774560901418635,5.5774560901418635,313.0
+E2,Medium,1.0,2045,A,B,False,12001000202,0.005827505827505829,0.0,new paired event simulation,5.337198034515721,5.337198034515721,78.0
+E2,Medium,1.0,2045,A,B,False,12001000301,0.03263403263403264,0.0,new paired event simulation,4.8829199335773374,4.8829199335773374,402.0
+E2,Medium,1.0,2045,A,B,False,12001000302,0.017482517482517487,0.0,new paired event simulation,4.472319019860015,4.472319019860015,210.0
+E2,Medium,1.0,2045,A,B,False,12001000400,0.03263403263403264,0.0,new paired event simulation,5.503235088336137,5.503235088336137,467.0
+E2,Medium,1.0,2045,A,B,False,12001000500,0.017482517482517487,-0.009018457424271986,new paired event simulation,5.083804069906422,5.092822527330694,238.0
+E2,Medium,1.0,2045,A,B,False,12001000600,0.02797202797202798,-0.04809424252096939,new paired event simulation,5.068186764063085,5.116281006584054,343.0
+E2,Medium,1.0,2045,A,B,False,12001000700,0.040792540792540806,-0.012718200805946545,new paired event simulation,5.531178495770265,5.543896696576212,536.0
+E2,Medium,1.0,2045,A,B,False,12001000806,0.0023310023310023314,0.0,new paired event simulation,4.360885130773402,4.360885130773402,30.0
+E2,Medium,1.0,2045,A,B,False,12001000808,0.010489510489510492,0.0,new paired event simulation,4.491880842431018,4.491880842431018,136.0
+E2,Medium,1.0,2045,A,B,False,12001000809,0.005827505827505829,0.0,new paired event simulation,3.828555857275427,3.828555857275427,71.0
+E2,Medium,1.0,2045,A,B,False,12001000901,0.0,,new paired event simulation,,,0.0
+E2,Medium,1.0,2045,A,B,False,12001000902,0.006993006993006994,0.0,new paired event simulation,4.742805683684645,4.742805683684645,118.0
+E2,Medium,1.0,2045,A,B,False,12001001000,0.017482517482517487,0.0,new paired event simulation,4.776609355512781,4.776609355512781,231.0
+E2,Medium,1.0,2045,A,B,False,12001001100,0.011655011655011658,0.005310869925089001,new paired event simulation,5.067421338870671,5.062110468945582,170.0
+E2,Medium,1.0,2045,A,B,False,12001001201,0.003496503496503497,0.0,new paired event simulation,4.064094043092258,4.064094043092258,49.0
+E2,Medium,1.0,2045,A,B,False,12001001202,0.017482517482517487,0.0,new paired event simulation,4.843217889780369,4.843217889780369,215.0
+E2,Medium,1.0,2045,A,B,False,12001001203,0.006993006993006995,0.0,new paired event simulation,4.3577861679822965,4.3577861679822965,118.0
+E2,Medium,1.0,2045,A,B,False,12001001400,0.04545454545454545,0.0,new paired event simulation,6.385763479781219,6.385763479781219,603.0
+E2,Medium,1.0,2045,A,B,False,12001001514,0.003496503496503497,0.0,new paired event simulation,3.2243457240866706,3.2243457240866706,54.0
+E2,Medium,1.0,2045,A,B,False,12001001515,0.01398601398601399,0.0,new paired event simulation,4.890795465318599,4.890795465318599,183.0
+E2,Medium,1.0,2045,A,B,False,12001001516,0.004662004662004663,0.0,new paired event simulation,4.839211034235791,4.839211034235791,58.0
+E2,Medium,1.0,2045,A,B,False,12001001517,0.004662004662004663,0.0,new paired event simulation,4.789903494636645,4.789903494636645,71.0
+E2,Medium,1.0,2045,A,B,False,12001001519,0.011655011655011658,0.0,new paired event simulation,4.983004494111271,4.983004494111271,132.0
+E2,Medium,1.0,2045,A,B,False,12001001522,0.040792540792540806,0.0,new paired event simulation,4.098694793164491,4.098694793164491,556.0
+E2,Medium,1.0,2045,A,B,False,12001001605,0.025641025641025647,0.0,new paired event simulation,4.42690774668923,4.42690774668923,412.0
+E2,Medium,1.0,2045,A,B,False,12001001701,0.011655011655011658,0.0,new paired event simulation,5.910777058175117,5.910777058175117,137.0
+E2,Medium,1.0,2045,A,B,False,12001001702,0.005827505827505829,0.0,new paired event simulation,5.6716276103744745,5.6716276103744745,61.0
+E2,Medium,1.0,2045,A,B,False,12001001802,0.022144522144522148,0.0,new paired event simulation,5.498726140928181,5.498726140928181,269.0
+E2,Medium,1.0,2045,A,B,False,12001001803,0.022144522144522148,0.0,new paired event simulation,5.250950668744784,5.250950668744784,310.0
+E2,Medium,1.0,2045,A,B,False,12001001811,0.011655011655011658,0.0,new paired event simulation,8.852990390894918,8.852990390894918,148.0
+E2,Medium,1.0,2045,A,B,False,12001001813,0.005827505827505829,0.0,new paired event simulation,6.782228712890811,6.782228712890811,67.0
+E2,Medium,1.0,2045,A,B,False,12001001815,0.01398601398601399,0.013854825744809673,new paired event simulation,13.435229373091715,13.421374547346906,144.0
+E2,Medium,1.0,2045,A,B,False,12001001816,0.03379953379953381,0.029634093202291822,new paired event simulation,6.991910551072428,6.962276457870137,435.0
+E2,Medium,1.0,2045,A,B,False,12001001817,0.011655011655011658,0.0,new paired event simulation,6.492726635919888,6.492726635919888,156.0
+E2,Medium,1.0,2045,A,B,False,12001001818,0.040792540792540806,0.10886204272081912,new paired event simulation,8.702852611571045,8.593990568850225,521.0
+E2,Medium,1.0,2045,A,B,False,12001001819,0.03146853146853148,0.003216694333975312,new paired event simulation,9.043197310843434,9.039980616509458,394.0
+E2,Medium,1.0,2045,A,B,False,12001001902,0.02447552447552448,0.0,new paired event simulation,5.936471303360791,5.936471303360791,348.0
+E2,Medium,1.0,2045,A,B,False,12001001907,0.012820512820512824,0.0,new paired event simulation,6.882430729134718,6.882430729134718,184.0
+E2,Medium,1.0,2045,A,B,False,12001001908,0.04778554778554777,0.0,new paired event simulation,8.376363556378864,8.376363556378864,615.0
+E2,Medium,1.0,2045,A,B,False,12001002001,0.003496503496503497,-0.5097466931394354,new paired event simulation,11.19474214029842,11.704488833437855,47.0
+E2,Medium,1.0,2045,A,B,False,12001002002,0.023310023310023315,-0.5327862744473384,new paired event simulation,7.916795172514534,8.449581446961872,296.0
+E2,Medium,1.0,2045,A,B,False,12001002101,0.010489510489510492,0.0,new paired event simulation,10.17712443508614,10.17712443508614,128.0
+E2,Medium,1.0,2045,A,B,False,12001002102,0.00815850815850816,0.0,new paired event simulation,7.725689376860007,7.725689376860007,99.0
+E2,Medium,1.0,2045,A,B,False,12001002201,0.02680652680652681,0.0,new paired event simulation,8.604240787728898,8.604240787728898,367.0
+E2,Medium,1.0,2045,A,B,False,12001002202,0.025641025641025647,0.0,new paired event simulation,8.5739706582232,8.5739706582232,376.0
+E2,Medium,1.0,2045,A,B,False,12001002204,0.023310023310023315,0.0,new paired event simulation,6.490456558868864,6.490456558868864,320.0
+E2,Medium,1.0,2045,A,B,False,12001002207,0.011655011655011658,0.0,new paired event simulation,6.064233624056468,6.064233624056468,161.0
+E2,Medium,1.0,2045,A,B,False,12001002208,0.004662004662004663,0.0,new paired event simulation,6.479404685608725,6.479404685608725,44.0
+E2,Medium,1.0,2045,A,B,False,12001002209,0.04195804195804197,0.0,new paired event simulation,9.401884186439165,9.401884186439165,529.0
+E2,Medium,1.0,2045,A,B,False,12001002210,0.012820512820512824,0.0,new paired event simulation,7.439026978961866,7.439026978961866,153.0
+E2,Medium,1.0,2045,A,B,False,12001002217,0.023310023310023315,0.0,new paired event simulation,7.436140721049625,7.436140721049625,291.0
+E2,Medium,1.0,2045,A,B,False,12001002218,0.00815850815850816,0.0,new paired event simulation,7.308796182578488,7.308796182578488,98.0
+E2,Medium,1.0,2045,A,B,False,12001002219,0.015151515151515155,0.0,new paired event simulation,6.494329321498856,6.494329321498856,163.0
+E2,Medium,1.0,2045,A,B,False,12001002220,0.01398601398601399,0.0,new paired event simulation,6.640220749314809,6.640220749314809,196.0
+E2,Medium,1.0,2045,A,B,False,12001002221,0.0023310023310023314,0.0,new paired event simulation,5.970120361162386,5.970120361162386,40.0
+E2,Medium,1.0,2045,A,B,False,12001002222,0.011655011655011658,0.0,new paired event simulation,6.729920419593839,6.729920419593839,165.0
+E2,Medium,1.0,2045,A,B,False,12001110800,0.0011655011655011657,0.0,new paired event simulation,4.196056752841847,4.196056752841847,17.0

@@ -1,0 +1,196 @@
+{
+  "created_utc": "2026-11-16T19:03:10.239985+00:00",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+  "packages": {
+    "numpy": "2.4.2",
+    "pandas": "3.0.1",
+    "geopandas": "1.1.3",
+    "simpy": "4.1.2",
+    "torch": "2.10.0",
+    "sb3-contrib": "2.9.2",
+    "stable-baselines3": "2.9.2"
+  },
+  "simulation_seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 7,
+  "model_frozen": true,
+  "training_runs_added": 0,
+  "inputs": [
+    {
+      "path": "station_optimization/task.md",
+      "sha256": "668466a8610d359a4ee2d204cee1dbc03ac568357461cd74fec5a2fd754c7225",
+      "bytes": 17482,
+      "original_sha256": "8b713f61771f919c62bb2f434487e9faa63e91e7eb8ed2abaffccf8f76a88190",
+      "original_bytes": 17461
+    },
+    {
+      "path": "station_optimization/run_experiments.py",
+      "sha256": "449593e76141b6f8f069b0134de7f34be7e04c9692203d57ffab957f3de2332f",
+      "bytes": 24297,
+      "original_sha256": "e4f60e48e421307ed96421f5f8baab3945800dfbfb36c050604bcd88b3068407",
+      "original_bytes": 24290
+    },
+    {
+      "path": "data/models/planning/setup.json",
+      "sha256": "460b074b8931b09f70c7c6d7157f8b4091c06a3473399f4e5c3ade6f1fccd0dd",
+      "bytes": 870
+    },
+    {
+      "path": "data/models/planning/baselines.pkl",
+      "sha256": "ee76d6a6f311f1a70ae5f62f1c1eb445449e50ada9393d24495fcb3ad57aec2f",
+      "bytes": 1139389
+    },
+    {
+      "path": "data/models/planning/final/model.zip",
+      "sha256": "93f5cb202a377edfa7ef1254e46864f56a34e889540e9f8d3afc98fd8a16f95a",
+      "bytes": 7256060
+    },
+    {
+      "path": "data/models/planning/final/run.json",
+      "sha256": "264f2d7ab941ca175928d83b594574cf8ba8a3676baee9dce812e3c9e7816944",
+      "bytes": 383
+    },
+    {
+      "path": "data/models/planning/final/health.csv",
+      "sha256": "3b0b824aca1d99ffedb2fbb02af573291303084245207dc2aa7b60f7f66a38b3",
+      "bytes": 765
+    },
+    {
+      "path": "data/derived/engine_dispatches_fy2025/engine_dispatches.parquet",
+      "sha256": "f8133d7292b215ce0c5e973c5e99f4ffc72bab9dc36382175a36aab588b86c89",
+      "bytes": 2752026
+    },
+    {
+      "path": "data/derived/engine_dispatches_fy2025/engines.csv",
+      "sha256": "f9a0ab39c092db648c546bfeb6221e05b4cfaf5d424fcb05a2ed65ba6f46edf9",
+      "bytes": 2996
+    },
+    {
+      "path": "data/raw/gnv_alachua/alachua_drive.graphml",
+      "sha256": "d59a55efdc8064352cf38285ccabdf495b36dabe382aef545d7eecd4ffcee64e",
+      "bytes": 21354571
+    },
+    {
+      "path": "data/raw/gnv_alachua/acfr_gfr_automatic_aid_fy2024.parquet",
+      "sha256": "6c294650b28391c99012d8cf6f3df4180f020b33a10a14f52bf145c8c3023451",
+      "bytes": 75387
+    },
+    {
+      "path": "data/raw/gnv_alachua/census2010_blocks_alachua.csv",
+      "sha256": "bf67ae8d3e6866375f9105c27d3422c48dcf1d88c6d4d8d5b5236af4f9ebd3a8",
+      "bytes": 535934
+    },
+    {
+      "path": "data/raw/gnv_alachua/census2020_blocks_alachua.gpkg",
+      "sha256": "0b94022c18ffa76239b4b661be2b100aca1d2a6ccf3e83e856389debfba1dbc2",
+      "bytes": 6246400
+    },
+    {
+      "path": "data/raw/gnv_alachua/bebr_alachua_projections_2026.csv",
+      "sha256": "f3102b932a91cb7d86ff3f58eb6ffdc5f1a5d2afa2a7378c91bcb61b985a2555",
+      "bytes": 304
+    },
+    {
+      "path": "code/dispatch_simulator/scenarios.py",
+      "sha256": "5b9acd113f0a3645f3f7ea774d203d2ed4268e4c205c2f6011bca0db1ad54036",
+      "bytes": 55608
+    },
+    {
+      "path": "code/dispatch_simulator/measures.py",
+      "sha256": "39fa78d9032fb5c543c5d53ca648cf8adbfc1fec9a8d7b88ea6fe7192fc6cee6",
+      "bytes": 120305
+    },
+    {
+      "path": "code/dispatch_simulator/e2_small_system.py",
+      "sha256": "133f5b6be182d39b8843f8b182fca48b80a450aed51ddc166081a72e67245491",
+      "bytes": 15840
+    },
+    {
+      "path": "code/dispatch_simulator/train.py",
+      "sha256": "567f2149144dfd1663c68e4289e25b61738516e9ff4e245e2396990415bf20d2",
+      "bytes": 47093
+    },
+    {
+      "path": "code/dispatch_simulator/environment.py",
+      "sha256": "92f9b4671437f08bcd0e47f4936d822f081ab171dfda819aced09d19363aa406",
+      "bytes": 99299
+    },
+    {
+      "path": "code/dispatch_simulator/planning.py",
+      "sha256": "705dc5bdb5af1128b07fd5ca00a9dabbc8250b933df585428813a83955e9e1f4",
+      "bytes": 58941
+    },
+    {
+      "path": "code/dispatch_simulator/plan_train.py",
+      "sha256": "1e802985c55be466045c8f4ff2d92aa07c2abcb11923cd0384cc59d98c119d8c",
+      "bytes": 27877
+    },
+    {
+      "path": "code/dispatch_simulator/main.py",
+      "sha256": "1ff4844db777b459d6c1f30bd1e9b18331abd549f745bbaf160600aa3cadfefc",
+      "bytes": 22350
+    },
+    {
+      "path": "code/dispatch_simulator/policies.py",
+      "sha256": "e6728a47e130ce9b9fa3fd3927786b7ddcff712c044eb5a26c63636b380979d2",
+      "bytes": 8734
+    },
+    {
+      "path": "code/dispatch_simulator/rl_env.py",
+      "sha256": "15839be885e90e1439a21bee57e3e6a61d5e3f7f5643461e32d148f95792afee",
+      "bytes": 38859
+    },
+    {
+      "path": "data/models/planning/final/validation_draws.csv",
+      "sha256": "9ad7827ce69e7df0a3065235d732c763cd37e58c1532ff192c84e0ee8e2c481d",
+      "bytes": 3594
+    },
+    {
+      "path": "data/models/planning/final/rq3_actions.csv",
+      "sha256": "bd59ff059a3e764245231eaa80e0223493f0b91b12de4684e442395c01a68359",
+      "bytes": 2483
+    },
+    {
+      "path": "data/models/planning/final/evaluation_comparisons.csv",
+      "sha256": "204d5d4ec2a8d0c265d3e27efbf33cdb84db469f892b10183cee70ef0f26134f",
+      "bytes": 1261
+    },
+    {
+      "path": "data/models/planning/final/evaluation_years.csv",
+      "sha256": "807d4deac57d3c29d47951cc0d3b658872a93a2928ce2a08d743b7fb188ef5b7",
+      "bytes": 202596
+    },
+    {
+      "path": "data/models/planning/final/evaluation_draws.csv",
+      "sha256": "45cafe00d6b3ccbb367592776373a34a2bfe369695deb9bf907e8c716f1baa0b",
+      "bytes": 25936
+    },
+    {
+      "path": "data/models/planning/final/progress.csv",
+      "sha256": "1e05c3112b11a842984604f60c95a491a9115fa978afd0074c3e66df69db7e5f",
+      "bytes": 54795
+    },
+    {
+      "path": "data/models/planning/final/verification.csv",
+      "sha256": "afb9d932e145fe758a6c7f3177a8c337f2b62ee79fe6fca654ef2d2a2ffc03f9",
+      "bytes": 7028
+    }
+  ],
+  "original_manifest_sha256": "89613c91befe9563eb1d0d0b9d3fc4e2f4a2b24ddae0a1087a2ac5a1b2e8a233"
+}

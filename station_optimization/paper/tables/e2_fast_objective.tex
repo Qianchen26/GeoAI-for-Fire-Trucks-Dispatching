@@ -1,0 +1,15 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Approximate-evaluator outcomes for the same E2 branches. The dispersion contrast is A minus B averaged over 2040 and 2045; negative favors A. Remaining return sums the original stage rewards over those two years; higher is better. Each reward is minus the sum of fire-travel dispersion and the original penalty for regional fire and other-call means above their 2025 targets. Penalty A/B sums these penalties over both years; each is ten times positive mean excess, with no 0.05-min deadband. The 0.05-min tolerance applies only to violation reporting. Return and penalty use minute-based objective units, not additional physical travel time. A adds one engine at E62 and B at CO\_29, followed by the frozen policy. The two states share the Medium county growth path and post-relocation branch configuration; $w=0$ is population-proportional growth and $w=1$ follows positive historical-growth shares.}
+\label{tab:e2_fast_objective}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrrr}
+\toprule
+Growth & Chosen & $\Delta D_F$ (min) & Penalty A & Penalty B & Return A & Return B \\
+\midrule
+$w=0$ & A & +0.00127 & 0.08727 & 0.14497 & -3.24813 & -3.30330 \\
+$w=1$ & B & +0.00157 & 0.00000 & 0.00000 & -3.16815 & -3.16501 \\
+\bottomrule
+\end{tabular}
+\end{table}

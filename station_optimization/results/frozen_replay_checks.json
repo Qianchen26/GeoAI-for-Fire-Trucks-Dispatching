@@ -1,0 +1,130 @@
+[
+  {
+    "path": "Medium",
+    "w": 1.0,
+    "year": 2030,
+    "station_action": "build at C16",
+    "vehicle_action": "+E at CO_21",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "Medium",
+    "w": 1.0,
+    "year": 2035,
+    "station_action": "build at C19",
+    "vehicle_action": "+E at CO_27",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "Medium",
+    "w": 1.0,
+    "year": 2040,
+    "station_action": "move GFR_01 to C18",
+    "vehicle_action": "+E at CO_29",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "Medium",
+    "w": 1.0,
+    "year": 2045,
+    "station_action": "build at C12",
+    "vehicle_action": "+E at CO_29",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "High",
+    "w": 1.0,
+    "year": 2030,
+    "station_action": "build at C16",
+    "vehicle_action": "+E at CO_21",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "High",
+    "w": 1.0,
+    "year": 2035,
+    "station_action": "build at C19",
+    "vehicle_action": "+E at CO_27",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "High",
+    "w": 1.0,
+    "year": 2040,
+    "station_action": "build at C12",
+    "vehicle_action": "+E at CO_29",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "High",
+    "w": 1.0,
+    "year": 2045,
+    "station_action": "build at C1",
+    "vehicle_action": "+E at E40",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "High",
+    "w": 0.0,
+    "year": 2030,
+    "station_action": "build at C16",
+    "vehicle_action": "+E at CO_21",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "High",
+    "w": 0.0,
+    "year": 2035,
+    "station_action": "build at C19",
+    "vehicle_action": "+Q at CO_27",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "High",
+    "w": 0.0,
+    "year": 2040,
+    "station_action": "build at C12",
+    "vehicle_action": "+E at CO_29",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "High",
+    "w": 0.0,
+    "year": 2045,
+    "station_action": "build at C1",
+    "vehicle_action": "+E at E40",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "Medium",
+    "w": 0.0,
+    "year": 2030,
+    "station_action": "build at C16",
+    "vehicle_action": "+E at CO_21",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "Medium",
+    "w": 0.0,
+    "year": 2035,
+    "station_action": "build at C19",
+    "vehicle_action": "+E at CO_27",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "Medium",
+    "w": 0.0,
+    "year": 2040,
+    "station_action": "move GFR_01 to C18",
+    "vehicle_action": "+E at E62",
+    "matches_original_actions_and_metrics": true
+  },
+  {
+    "path": "Medium",
+    "w": 0.0,
+    "year": 2045,
+    "station_action": "build at C12",
+    "vehicle_action": "+E at CO_29",
+    "matches_original_actions_and_metrics": true
+  }
+]

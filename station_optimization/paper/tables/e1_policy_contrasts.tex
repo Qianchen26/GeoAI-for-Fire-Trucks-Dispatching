@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Direct frozen-PPO minus stage-greedy contrasts in discrete-event simulation (E1). Negative values favor PPO. Entries are differences in minutes with 95\% paired bootstrap intervals. $D_F$ measures fixed-fire-rate-weighted dispersion of tract mean fire travel; $M_F$ and $M_O$ measure regional mean fire and other-call travel. Both policies share the same 15 incident streams (seeds 101--115); 2,000 bootstrap draws resample whole streams and recompute pooled tract means and dispersion. Medium and High denote county population paths; spatial growth mix $w=0$ allocates growth in proportion to population and $w=1$ follows positive historical growth shares. Years are evaluation years. Zero intervals at identical configurations express deterministic equality, with no extra simulation. Intervals describe incident-stream variation within each stated scenario.}
+\label{tab:e1_policy_contrasts}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrr}
+\toprule
+Growth scenario & Year & $\Delta D_F$ [95\% CI] & $\Delta M_F$ [95\% CI] & $\Delta M_O$ [95\% CI] \\
+\midrule
+Medium, $w=1$ & 2035 & \shortstack[r]{+0.0000\\\strut [+0.0000, +0.0000]} & \shortstack[r]{+0.0000\\\strut [+0.0000, +0.0000]} & \shortstack[r]{+0.0000\\\strut [+0.0000, +0.0000]} \\
+Medium, $w=1$ & 2045 & \shortstack[r]{+0.0014\\\strut [-0.0107, +0.0110]} & \shortstack[r]{-0.0875\\\strut [-0.1006, -0.0757]} & \shortstack[r]{-0.0476\\\strut [-0.0510, -0.0445]} \\
+High, $w=1$ & 2035 & \shortstack[r]{+0.0000\\\strut [+0.0000, +0.0000]} & \shortstack[r]{+0.0000\\\strut [+0.0000, +0.0000]} & \shortstack[r]{+0.0000\\\strut [+0.0000, +0.0000]} \\
+High, $w=1$ & 2045 & \shortstack[r]{-0.0033\\\strut [-0.0230, +0.0116]} & \shortstack[r]{-0.1998\\\strut [-0.2223, -0.1812]} & \shortstack[r]{-0.1579\\\strut [-0.1599, -0.1560]} \\
+High, $w=0$ & 2035 & \shortstack[r]{+0.0011\\\strut [-0.0002, +0.0027]} & \shortstack[r]{+0.0008\\\strut [-0.000087, +0.0020]} & \shortstack[r]{+0.000080\\\strut [+0.000026, +0.0001]} \\
+High, $w=0$ & 2045 & \shortstack[r]{+0.0215\\\strut [-0.0011, +0.0376]} & \shortstack[r]{-0.1109\\\strut [-0.1248, -0.0976]} & \shortstack[r]{-0.0822\\\strut [-0.0849, -0.0795]} \\
+\bottomrule
+\end{tabular}
+\end{table}

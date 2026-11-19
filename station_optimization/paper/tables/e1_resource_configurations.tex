@@ -1,0 +1,19 @@
+\begin{table}[htbp]
+\centering
+\small
+\caption{Resource configurations used in E1. Each entry gives active station/base locations, engines (E), and quints (Q) in that order. Both policies start with 25 locations, 23 engines and 5 quints. Each five-year stage allows at most one station action (build, relocate, or hold) and one vehicle addition (engine or quint, or hold). Building includes one engine, so equal action limits permit different realized fleet sizes and compositions. The final column is PPO minus greedy in total vehicles. Policy contrasts include the consequences of these resource choices. Medium and High are county population paths; $w=0$ allocates growth in proportion to population and $w=1$ follows positive historical growth. Years denote evaluation years.}
+\label{tab:e1_resource_configurations}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrr}
+\toprule
+Growth scenario & Year & PPO: locations / E / Q & Greedy: locations / E / Q & $\Delta$ vehicles \\
+\midrule
+Medium, $w=1$ & 2035 & 27 / 27 / 5 & 27 / 27 / 5 & +0 \\
+Medium, $w=1$ & 2045 & 28 / 30 / 5 & 27 / 29 / 5 & +1 \\
+High, $w=1$ & 2035 & 27 / 27 / 5 & 27 / 27 / 5 & +0 \\
+High, $w=1$ & 2045 & 29 / 31 / 5 & 27 / 28 / 6 & +2 \\
+High, $w=0$ & 2035 & 27 / 26 / 6 & 27 / 27 / 5 & +0 \\
+High, $w=0$ & 2045 & 29 / 30 / 6 & 28 / 29 / 6 & +1 \\
+\bottomrule
+\end{tabular}
+\end{table}
